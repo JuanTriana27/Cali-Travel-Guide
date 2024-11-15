@@ -2,9 +2,7 @@
   width: 100%; /* Ancho uniforme */
   height: 655px; /* Altura uniforme */
   position: relative;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #000000;
   overflow: hidden;
 }
 
@@ -23,21 +21,23 @@
 
 .cardContent {
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #ffffff;
+  color: #000000;
   z-index: 2; /* Asegura que el contenido esté sobre la figura roja */
 }
 
 .cardTitle {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 3rem;
   font-weight: bold;
   color: #ffffff;
 }
 
 .cardSubtitle {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.5rem;
   color: #ffffff;
 }
@@ -48,8 +48,8 @@
   bottom: -100%; /* Oculto inicialmente */
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(255, 0, 0, 0.7); /* Color rojo con transparencia */
+  height: 40%;
+  background-color: rgba(51, 102, 204, 0.7); /* Color azul con transparencia */
   transition: bottom 0.3s ease; /* Animación suave */
   z-index: 1; /* Debajo del contenido */
 }

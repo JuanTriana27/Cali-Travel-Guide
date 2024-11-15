@@ -3,17 +3,22 @@
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: #fff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle un poco de profundidad */
+  background-color: #36c;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .navbar h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.8rem;
   font-weight: bold;
-  color: #333;
+  color: #FFFFFF;
+}
+
+/* Hoover en el titulo principal */
+.navbar h1:hover {
+  color: #D50032;
 }
 
 .navbarMenu {
@@ -22,11 +27,12 @@
 }
 
 .navbarMenu li {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 0 1.5rem;
   cursor: pointer;
   position: relative;
   font-size: 1.1rem;
-  color: #333;
+  color: #FFFFFF;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -36,15 +42,15 @@
   content: '';
   position: absolute;
   left: 0;
-  bottom: -5px;
+  bottom: -1px;
   width: 0;
-  height: 2px;
-  background-color: #ff0000;
+  height: 3px;
+  background-color: #FFFFFF;
   transition: width 0.3s ease; /* Hace que la línea se deslice */
 }
 
 .navbarMenu li:hover {
-  color: #ff0000;
+  color: #D50032;
 }
 
 .navbarMenu li:hover::after {

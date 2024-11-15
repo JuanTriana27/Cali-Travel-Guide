@@ -9,7 +9,7 @@ const Navbar = () => (
       <li>INICIO</li>
       <li>LUGARES</li>
       <li>ACERCA DE</li>
-      <li>CONTACTOS</li>
+      <li>CONTACTENOS</li>
     </ul>
   </nav>
 );
