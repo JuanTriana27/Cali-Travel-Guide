@@ -45,8 +45,8 @@
 
 /* Efecto hover: cambio de color de texto y fondo */
 .navbarMenu li:hover {
-  color: #000000; /* Rojo */
-  background-color: rgba(255, 255, 255, 0.1); /* Fondo sutil */
+  color: #000000;
+  background-color: rgb(255, 255, 255); /* Fondo sutil */
 }
 
 /* Animación de subrayado */
@@ -56,8 +56,8 @@
   left: 0;
   bottom: -1px;
   width: 0;
-  height: 3px;
-  background-color: #FFFFFF; /* Blanco */
+  height: 2px;
+  background-color: #000000; /* Blanco */
   transition: width 0.3s ease;
 }
 
