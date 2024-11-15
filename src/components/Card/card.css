@@ -1,45 +1,60 @@
-/*.card para el estilo de la tarjeta*/
 .card {
-  width: 300px; /* Ajusta el ancho para todas las tarjetas */
-  height: 400px; /* Ajusta la altura para todas las tarjetas */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%; /* Ancho uniforme */
+  height: 655px; /* Altura uniforme */
+  position: relative;
   background-color: #f0f0f0;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.05); /* Animación de escala */
 }
 
 .cardImage {
   width: 100%;
-  height: 500px; /* Ajusta la altura como prefieras */
-  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
-  border-radius: 8px 8px 0 0;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+/* Mantén la opacidad en hover si es necesario */
+.card:hover .cardImage {
+  opacity: 0.8;
 }
 
 .cardContent {
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
-  padding: 1rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  color: #ffffff;
+  z-index: 2; /* Asegura que el contenido esté sobre la figura roja */
 }
 
 .cardTitle {
-  margin-top: 1rem;
-  font-size: 1.2rem;
+  font-size: 3rem;
   font-weight: bold;
-  color: #333;
+  color: #ffffff;
 }
 
 .cardSubtitle {
-  font-size: 1rem;
-  color: #777;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+/* Figura roja que aparece desde abajo */
+.cardOverlay {
+  position: absolute;
+  bottom: -100%; /* Oculto inicialmente */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.7); /* Color rojo con transparencia */
+  transition: bottom 0.3s ease; /* Animación suave */
+  z-index: 1; /* Debajo del contenido */
+}
+
+/* Animación al hacer hover */
+.card:hover .cardOverlay {
+  bottom: 0; /* La figura roja se desliza hacia arriba */
 }
