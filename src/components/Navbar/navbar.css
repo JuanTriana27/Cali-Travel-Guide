@@ -1,0 +1,52 @@
+/* src/components/Navbar/Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle un poco de profundidad */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.navbarMenu {
+  display: flex;
+  list-style: none;
+}
+
+.navbarMenu li {
+  margin: 0 1.5rem;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Animación para cada opción de la Navbar */
+.navbarMenu li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #ff0000;
+  transition: width 0.3s ease; /* Hace que la línea se deslice */
+}
+
+.navbarMenu li:hover {
+  color: #ff0000;
+}
+
+.navbarMenu li:hover::after {
+  width: 100%; /* Anima la línea subrayada */
+}
