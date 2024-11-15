@@ -8,7 +8,7 @@ const Home = () => (
   <div className="home">
     <Card title="RECORRIDO" subtitle="Explora" />
     <Card title="HISTORIA" subtitle="Conoce" />
-    <Card title="FOTOGRAFÍAS" subtitle="Mirar" />
+    <Card title="FOTOGRAFÍAS" subtitle="Mira" />
   </div>
 );
 

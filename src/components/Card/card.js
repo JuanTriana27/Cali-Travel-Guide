@@ -2,7 +2,7 @@
 import React from 'react';
 import '../Card/card.css';
 
-// Importa cada imagen con un nombre específico
+// Importamos cada imagen con un nombre específico
 import recorrido from '../../assets/imagenes/Recorrido.jpg';
 import fotografias from '../../assets/imagenes/CristoRey.jpg';
 import cristoRey from '../../assets/imagenes/Fotografias.jpg';
@@ -22,7 +22,7 @@ const Card = ({ title, subtitle }) => {
   return (
     <div className="card">
       <img src={imgSrc} alt={title} className="cardImage" />
-      
+
       {/* Contenido de la tarjeta */}
       <div className="cardContent">
         <h2 className="cardTitle">{title}</h2>

@@ -1,39 +1,41 @@
 .card {
-  width: 100%; /* Ancho uniforme */
-  height: 655px; /* Altura uniforme */
-  position: relative;
-  background-color: #000000;
-  overflow: hidden;
+  width: 100%; /* Ancho de las Card */
+  height: 655px; /* Altura de las Card */
+  position: relative; /* Para que los elementos internos se posicionen correctamente */
+  background-color: #000000; /* Color de fondo */
+  overflow: hidden; /* Oculta el contenido que se desborda */
 }
 
 .cardImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+  width: 100%; /* Ancho de la imagen */
+  height: 100%; /* Altura de la imagen */
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+  opacity: 0.6; /* Opacidad inicial */
+  transition: opacity 0.3s ease; /* Animación suave */
 }
 
-/* Mantén la opacidad en hover si es necesario */
+/* Mantener la Opacidad */
 .card:hover .cardImage {
-  opacity: 0.8;
+  opacity: 0.8; /* Opacidad al hacer hover */
 }
 
+/* Contenido de las Card */
 .cardContent {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #000000;
-  z-index: 2; /* Asegura que el contenido esté sobre la figura roja */
+  position: absolute; /* Posiciona el contenido sobre la imagen */
+  top: 80%; /* Ajusta la posición vertical */
+  left: 50%; /* Ajusta la posición horizontal */ 
+  transform: translate(-50%, -50%); /* Centra el contenido */
+  text-align: center; /* Alinea el texto al centro */
+  color: #000000; /* Color del texto */
+  z-index: 2; /* Encima de la imagen */
 }
+
 
 .cardTitle {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 3rem;
-  font-weight: bold;
-  color: #ffffff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente del título */
+  font-size: 3rem; /* Tamaño del título */
+  font-weight: bold; /* Negrita */
+  color: #ffffff; /* Color del texto */
 }
 
 .cardSubtitle {
@@ -42,13 +44,13 @@
   color: #ffffff;
 }
 
-/* Figura roja que aparece desde abajo */
+/* Transicion desde abajo */
 .cardOverlay {
-  position: absolute;
+  position: absolute; /* Posiciona la figura roja */
   bottom: -100%; /* Oculto inicialmente */
-  left: 0;
-  width: 100%;
-  height: 40%;
+  left: 0; /* Ajusta la posición horizontal */
+  width: 100%; /* Ancho de la figura roja */
+  height: 40%; /* Altura de la figura roja */
   background-color: rgba(51, 102, 204, 0.7); /* Color azul con transparencia */
   transition: bottom 0.3s ease; /* Animación suave */
   z-index: 1; /* Debajo del contenido */
