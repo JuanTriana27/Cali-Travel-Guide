@@ -1,5 +1,6 @@
 .card {
   cursor: pointer;
+  grid-row: span 1; /* Ocupa una fila */
   width: 100%; /* Ancho de las Card */
   height: 615px; /* Altura de las Card */
   position: relative; /* Para que los elementos internos se posicionen correctamente */

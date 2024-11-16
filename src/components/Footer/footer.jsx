@@ -4,16 +4,16 @@ import "../Footer/footer.css";
 const Footer = () => {
     return (
         <footer className="footer">
-            <div className="footer-container">
+            <div className="footerContainer">
                 {/* Columna 1 */}
-                <div className="footer-column">
+                <div className="footerColumn">
                     <h3>Visítenos</h3>
                     <p>Monumento Cristo Rey<br />Cali, Valle del Cauca<br />Colombia</p>
-                    <button className="footer-button">Más información</button>
+                    <button className="footerButton">Más información</button>
                 </div>
 
                 {/* Columna 2 */}
-                <div className="footer-column">
+                <div className="footerColumn">
                     <h3>Enlaces útiles</h3>
                     <ul>
                         {/* <li><a href="#">Historia</a></li>
@@ -24,9 +24,9 @@ const Footer = () => {
                 </div>
 
                 {/* Columna 3 */}
-                <div className="footer-column">
+                <div className="footerColumn">
                     <h3>Redes Sociales</h3>
-                    <div className="footer-socials">
+                    <div className="footerSocials">
                         <ul>
                             {/* <li><a href="#"><i className="fab fa-instagram">Instagram</i></a></li>
                             <li><a href="#"><i className="fab fa-facebook">Facebook</i></a></li>
@@ -38,7 +38,7 @@ const Footer = () => {
             </div>
 
             {/* Barra inferior */}
-            <div className="footer-bottom">
+            <div className="footerBottom">
                 <p>Cali Travel Guide © 2024</p>
                 {/* <a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a> */}
             </div>

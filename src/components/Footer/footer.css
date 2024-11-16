@@ -7,7 +7,7 @@
   }
   
   /* Contenedor principal */
-  .footer-container {
+  .footerContainer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -15,23 +15,23 @@
   }
   
   /* Columnas del footer */
-  .footer-column {
+  .footerColumn {
     flex: 1;
     min-width: 200px; /* Responsivo */
   }
   
-  .footer-column h3 {
+  .footerColumn h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
   }
   
-  .footer-column p {
+  .footerColumn p {
     font-size: 0.9rem;
     line-height: 1.5;
   }
   
   /* Botón */
-  .footer-button {
+  .footerButton {
     background-color: #36c;
     color: #fff;
     padding: 0.5rem 1rem;
@@ -42,50 +42,50 @@
     transition: background-color 0.3s ease;
   }
   
-  .footer-button:hover {
+  .footerButton:hover {
     background-color: #2a58a5;
   }
   
   /* Lista de enlaces */
-  .footer-column ul {
+  .footerColumn ul {
     list-style: none;
     padding: 0;
   }
   
-  .footer-column ul li {
+  .footerColumn ul li {
     margin-bottom: 0.5rem;
   }
   
-  .footer-column ul li a {
+  .footerColumn ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.3s ease;
   }
   
-  .footer-column ul li a:hover {
+  .footerColumn ul li a:hover {
     color: #36c; /* Azul */
   }
   
   /* Redes sociales */
-  .footer-socials {
+  .footerSocials {
     display: flex;
     justify-content: center;
     gap: 1rem;
   }
   
-  .footer-socials a {
+  .footerSocials a {
     color: #fff;
     font-size: 1.5rem;
     transition: color 0.3s ease;
   }
   
-  .footer-socials a:hover {
+  .footerSocials a:hover {
     color: #36c;
   }
   
   /* Barra inferior */
-  .footer-bottom {
+  .footerBottom {
     margin-top: 2rem;
     text-align: center;
     font-size: 0.8rem;
@@ -93,14 +93,14 @@
     padding-top: 1rem;
   }
   
-  .footer-bottom a {
+  .footerBottom a {
     color: #fff;
     text-decoration: none;
     margin: 0 0.5rem;
     transition: color 0.3s ease;
   }
   
-  .footer-bottom a:hover {
+  .footerBottom a:hover {
     color: #36c;
   }
   
