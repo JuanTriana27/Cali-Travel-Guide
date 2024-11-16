@@ -1,6 +1,7 @@
 import React from 'react';
-import Navbar from './components/Navbar/navbar.js';
-import Home from './pages/Home/home.js';
+import Navbar from './components/Navbar/navbar.jsx';
+import Home from './pages/Home/home.jsx';
+import Footer from './components/Footer/footer.jsx';
 import '../src/assets/styles/App.css';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Home />
+      <Footer /> {/* Agregamos el componente del footer */}
     </div>
   );
 }

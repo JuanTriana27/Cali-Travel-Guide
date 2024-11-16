@@ -1,7 +1,7 @@
 .card {
   cursor: pointer;
   width: 100%; /* Ancho de las Card */
-  height: 655px; /* Altura de las Card */
+  height: 615px; /* Altura de las Card */
   position: relative; /* Para que los elementos internos se posicionen correctamente */
   background-color: #000000; /* Color de fondo */
   overflow: hidden; /* Oculta el contenido que se desborda */

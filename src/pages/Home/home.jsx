@@ -1,6 +1,6 @@
 // imortamos React, el componente Card y card.css
 import React from 'react';
-import Card from '../../components/Card/card.js';
+import Card from '../../components/Card/card.jsx';
 import '../Home/home.css';
 
 // Creamos un componente funcional Home que contiene tres componentes Card para la Interfaz
