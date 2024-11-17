@@ -54,7 +54,7 @@
   width: 100%; /* Ancho de la figura roja */
   height: 40%; /* Altura de la figura roja */
   background-color: rgb(0, 85, 255); /* Color azul con transparencia */
-  transition: bottom 0.3s ease; /* Animación suave */
+  transition: bottom 0.6s ease; /* Animación suave */
   z-index: 1; /* Debajo del contenido */
 }
 
