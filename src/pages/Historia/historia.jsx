@@ -1,7 +1,11 @@
 import React from 'react';
 import '../../pages/Historia/historia.css'; // Agrega estilos si los necesitas
 
+// Imagenes
+import image4 from '../../assets/imagenes/Image4.jpg';
+
 const Historia = () => {
+  let imgSrc = image4;
   return (
     <div className="historia">
       <header className="historiaHeader">
@@ -12,7 +16,7 @@ const Historia = () => {
       <section className="historiaContent">
         <div className="historiaImageContainer">
           <img
-            src="https://via.placeholder.com/800x400"
+            src={imgSrc}
             alt="Cristo Rey"
             className="historiaImage"
           />
@@ -35,7 +39,7 @@ const Historia = () => {
         <h2>Línea de tiempo</h2>
         <ul className="timeline">
           <li>
-            <span className="year">1950</span>
+            <span className="year">1947</span>
             Inicio de la construcción del monumento.
           </li>
           <li>
@@ -43,13 +47,33 @@ const Historia = () => {
             Inauguración oficial de Cristo Rey.
           </li>
           <li>
+            <span className="year">1973</span>
+            Colocación del primer sistema de iluminación.
+          </li>
+          <li>
             <span className="year">1980</span>
             Reconocido como patrimonio cultural de la región.
+          </li>
+          <li>
+            <span className="year">1983-1990</span>
+            Mantenimiento y restauración parcial.
+          </li>
+          <li>
+            <span className="year">2004</span>
+            Instalación de una nueva cruz iluminada.
+          </li>
+          <li>
+            <span className="year">2012-2013</span>
+            Restauración de la estatua.
+          </li>
+          <li>
+            <span className="year">2023</span>
+            Remodelación y modernización.
           </li>
         </ul>
       </section>
 
-      
+
     </div>
   );
 };
