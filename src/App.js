@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/navbar.jsx';
 import Home from './pages/Home/home.jsx';
 import Footer from './components/Footer/footer.jsx';
 import Historia from './pages/Historia/historia.jsx'; // Asegúrate de tener esta página creada
+import Fotografias from './pages/Fotografias/fotografias.jsx'; // Asegúrate de tener esta página creada
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/historia" element={<Historia />} />
+          <Route path="/fotografias" element={<Fotografias />} />
         </Routes>
         <Footer /> {/* Agregamos el componente del footer */}
       </div>

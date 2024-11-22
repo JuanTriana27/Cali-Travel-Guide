@@ -6,7 +6,7 @@ const Home = () => (
   <div className="home">
     <Card title="RECORRIDO" subtitle="Explora" />
     <Card title="HISTORIA" subtitle="Conoce" link="/historia" />
-    <Card title="FOTOGRAFÍAS" subtitle="Mira" />
+    <Card title="FOTOGRAFÍAS" subtitle="Mira" link="fotografias" />
   </div>
 );
 
