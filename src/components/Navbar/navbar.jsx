@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'; // Link para navegación
 import "./navbar.css";
 
 const Navbar = () => (
@@ -11,7 +12,7 @@ const Navbar = () => (
 
     {/* Menú */}
     <ul className="navbarMenu" id="menu-icon-acction">
-      <li>INICIO</li>
+      <li><Link to="/" className="navbarLink">INICIO</Link></li> {/* Redirige al Home */}
       <li>LUGARES</li>
       <li>CONTACTENOS</li>
     </ul>

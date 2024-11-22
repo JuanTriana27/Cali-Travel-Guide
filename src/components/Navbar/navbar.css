@@ -25,6 +25,23 @@
   color: #000000;
 }
 
+/* Estilo de los enlaces dentro de .navbarMenu */
+.navbarMenu a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: #FFFFFF; /* Asegura que los enlaces sean blancos */
+}
+
+/* Eliminar subrayado cuando los enlaces son visitados */
+.navbarMenu a:visited {
+  text-decoration: none; /* Elimina el subrayado en enlaces visitados */
+}
+
+/* Agregar un estilo a los enlaces cuando se pase el cursor */
+.navbarMenu a:hover {
+  color: #000000; /* Cambia el color cuando pasa el mouse */
+}
+
+
 /* Estilos para el menú de navegación */
 .navbarMenu {
   display: flex; /* Alinea los elementos en fila */

@@ -1,0 +1,131 @@
+/* Estructura General */
+.historia {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/* Encabezado */
+.historiaHeader {
+  background: linear-gradient(135deg, #42a5f5, #0077c2);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.historiaTitle {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.historiaSubtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+/* Contenido principal */
+.historiaContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.historiaImageContainer {
+  flex: 1;
+  text-align: center;
+}
+
+.historiaImage {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.historiaText {
+  flex: 1;
+  max-width: 600px;
+}
+
+.historiaText h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.historiaText p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Línea de Tiempo */
+.historiaTimeline {
+  background-color: #f5f5f5;
+  padding: 2rem;
+  text-align: center;
+}
+
+.historiaTimeline h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+.timeline li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 10px;
+  height: 10px;
+  background: #0077c2;
+  border-radius: 50%;
+}
+
+.year {
+  font-weight: bold;
+  color: #0077c2;
+  margin-right: 0.5rem;
+}
+
+/* Footer */
+.historiaFooter {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* Solo en dispositivos móviles */
+@media (max-width: 768px) {
+  .historiaContent {
+    flex-wrap: wrap;
+  }
+
+  .historiaImageContainer {
+    flex: 1 1 100%;
+  }
+
+  .historiaText {
+    flex: 1 1 100%;
+  }
+}
