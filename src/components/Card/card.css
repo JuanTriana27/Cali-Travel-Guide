@@ -1,64 +1,71 @@
+/* Estilo general de card */
 .card {
+  width: 100%;
+  height: 615px;
+  position: relative;
+  grid-row: span 1;
   cursor: pointer;
-  grid-row: span 1; /* Ocupa una fila */
-  width: 100%; /* Ancho de las Card */
-  height: 615px; /* Altura de las Card */
-  position: relative; /* Para que los elementos internos se posicionen correctamente */
-  background-color: #000000; /* Color de fondo */
-  overflow: hidden; /* Oculta el contenido que se desborda */
+  background-color: #000000;
+  overflow: hidden;
 }
 
+/* Estilo para las imagenes */
 .cardImage {
-  width: 100%; /* Ancho de la imagen */
-  height: 100%; /* Altura de la imagen */
-  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
-  opacity: 0.6; /* Opacidad inicial */
-  transition: opacity 0.3s ease; /* Animación suave */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  transition: opacity 0.3s easy;
 }
 
-/* Mantener la Opacidad */
+/* Animacion para las imagenes dentro de card*/
 .card:hover .cardImage {
-  opacity: 0.8; /* Opacidad al hacer hover */
+  opacity: 0.8;
 }
 
-/* Contenido de las Card */
+/* Estilo para el contenido de la card */
 .cardContent {
-  position: absolute; /* Posiciona el contenido sobre la imagen */
-  top: 80%; /* Ajusta la posición vertical */
-  left: 50%; /* Ajusta la posición horizontal */ 
-  transform: translate(-50%, -50%); /* Centra el contenido */
-  text-align: center; /* Alinea el texto al centro */
-  color: #000000; /* Color del texto */
-  z-index: 2; /* Encima de la imagen */
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 2;
 }
 
-
+/* Estilo para el titulo de card*/
 .cardTitle {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente del título */
-  font-size: 3rem; /* Tamaño del título */
-  font-weight: bold; /* Negrita */
-  color: #ffffff; /* Color del texto */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
 }
 
+/* Estilo para el subtitulo de card */
 .cardSubtitle {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.5rem;
   color: #ffffff;
 }
 
-/* Transicion desde abajo */
+/* Estilo para el overlay de card */
 .cardOverlay {
-  position: absolute; /* Posiciona la figura roja */
-  bottom: -100%; /* Oculto inicialmente */
-  left: 0; /* Ajusta la posición horizontal */
-  width: 100%; /* Ancho de la figura roja */
-  height: 40%; /* Altura de la figura roja */
-  background-color: rgb(0, 85, 255); /* Color azul con transparencia */
-  transition: bottom 0.6s ease; /* Animación suave */
-  z-index: 1; /* Debajo del contenido */
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background-color: rgb(0, 85, 255);
+  transition: bottom 0.6s ease;
+  z-index: 1;
 }
 
-/* Animación al hacer hover */
+/* Animacion para el overlay de card */
 .card:hover .cardOverlay {
-  bottom: 0; /* La figura roja se desliza hacia arriba */
+  bottom: 0;
 }

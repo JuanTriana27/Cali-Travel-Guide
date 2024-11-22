@@ -23,7 +23,7 @@ const Fotografias = () => {
     return (
         <div className="fotografias">
             <header className="fotografiasHeader">
-                <h1 className="fotografiasTitle">Galería de Fotografías</h1>
+                <h1 className="fotografiasTitle">Fotografías</h1>
                 <p className="fotografiasSubtitle">
                     Explora momentos únicos capturados en imágenes.
                 </p>

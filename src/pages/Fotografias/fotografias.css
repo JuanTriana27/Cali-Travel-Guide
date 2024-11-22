@@ -17,12 +17,14 @@
     animation: slideDown 1.2s ease-in-out;
 }
 
+/* Titulo Principal */
 .fotografiasTitle {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
     animation: fadeInTitle 1.5s ease forwards;
 }
 
+/* Subtitulo */
 .fotografiasSubtitle {
     font-size: 1.2rem;
     font-weight: 300;
@@ -34,8 +36,8 @@
 .galeria {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem;
+    gap: 1rem;
+    padding: 3rem;
     animation: fadeIn 1.5s ease-in-out;
 }
 

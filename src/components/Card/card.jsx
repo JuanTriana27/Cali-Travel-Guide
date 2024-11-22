@@ -1,11 +1,13 @@
-import React from 'react';
+import React from 'react'; // Importamos React para poder usar sus funcionalidades
 import { Link } from 'react-router-dom'; // Link para navegación
-import '../Card/card.css';
+import '../Card/card.css'; // Importamos el archivo de estilos
 
+// Importamos las imágenes que se mostrarán en las tarjetas
 import recorrido from '../../assets/imagenes/Recorrido.jpg';
 import fotografias from '../../assets/imagenes/CristoRey.jpg';
 import cristoRey from '../../assets/imagenes/Fotografias.jpg';
 
+// Creamos el componente Card
 const Card = ({ title, subtitle, link }) => {
   let imgSrc;
   if (title === "HISTORIA") {
@@ -16,6 +18,7 @@ const Card = ({ title, subtitle, link }) => {
     imgSrc = fotografias;
   }
 
+  // Retornamos la estructura HTML de la tarjeta
   return (
     <div className="card">
       {/* Envolvemos toda la tarjeta con un enlace */}
@@ -33,4 +36,5 @@ const Card = ({ title, subtitle, link }) => {
   );
 };
 
+// Exportamos el componente Card
 export default Card;
