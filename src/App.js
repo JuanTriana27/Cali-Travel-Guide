@@ -9,20 +9,20 @@ import Fotografias from './pages/Fotografias/fotografias.jsx';
 function App() {
   return (
     <Router>
-      <div className="App" style={{ 
+      <div className="app-container" style={{
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh',
-        position: 'relative'
+        margin: 0,
+        padding: 0
       }}>
         <Navbar />
         
-        {/* Contenido principal */}
         <main style={{
           flex: 1,
-          
           width: '100%',
-          overflowX: 'hidden'
+          overflow: 'hidden',
+          position: 'relative'
         }}>
           <Routes>
             <Route path="/" element={<Home />} />

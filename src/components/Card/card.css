@@ -1,3 +1,10 @@
+/* Eliminar todos los márgenes y paddings innecesarios */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Estilo general de card */
 .card {
   width: 100%;
