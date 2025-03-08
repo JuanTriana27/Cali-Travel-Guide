@@ -29,13 +29,15 @@
 @media (max-width: 768px) {
   .home {
     min-height: calc(100vh - 80px);
-    padding: 10px;
-    gap: 1rem;
+    padding: 0; /* Eliminamos el padding del contenedor */
+    gap: 0; /* Eliminamos el espacio entre cards */
   }
   
   .card {
     width: 100%;
     min-height: 30vh;
     flex: none;
+    margin: 0; /* Aseguramos que no tenga márgenes */
+    border-radius: 0; /* Opcional: si quieres eliminar bordes redondeados */
   }
 }

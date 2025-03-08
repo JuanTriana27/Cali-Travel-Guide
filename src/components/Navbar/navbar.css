@@ -98,7 +98,7 @@
   transition: transform 0.4s ease;
 }
 
-#menuToggle:checked ~ #menuIcon {
+#menuToggle:checked~#menuIcon {
   transform: rotate(90deg);
 }
 
@@ -117,7 +117,7 @@
     max-width: 300px;
     background-color: #36c;
     border-radius: 0 0 0 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     padding: 1rem 0;
     opacity: 0;
     transform: translateY(-20px);
@@ -125,7 +125,7 @@
     pointer-events: none;
   }
 
-  #menuToggle:checked ~ .navbarMenu {
+  #menuToggle:checked~.navbarMenu {
     opacity: 1;
     transform: translateY(0);
     pointer-events: all;
@@ -159,6 +159,7 @@
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -170,8 +171,16 @@
   .navbarMenu li {
     animation: slideIn 0.4s ease backwards;
   }
-  
-  .navbarMenu li:nth-child(1) { animation-delay: 0.1s; }
-  .navbarMenu li:nth-child(2) { animation-delay: 0.2s; }
-  .navbarMenu li:nth-child(3) { animation-delay: 0.3s; }
+
+  .navbarMenu li:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  .navbarMenu li:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .navbarMenu li:nth-child(3) {
+    animation-delay: 0.3s;
+  }
 }

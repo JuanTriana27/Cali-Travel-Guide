@@ -1,54 +1,55 @@
-/* Estilos generales para el footer */
+/* ========== FOOTER GENERAL ========== */
 .footer {
   background-color: #111;
   color: #fff;
-  height: 200px;
+  min-height: 200px;
   padding: 2rem 1rem;
   font-family: Arial, sans-serif;
   position: relative;
   overflow: hidden;
 }
 
-/* Contenedor del footer */
+/* ========== CONTENEDOR PRINCIPAL ========== */
 .footerContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1.5rem;
-  align-items: center;
-  position: relative;
-  z-index: 1;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-/* Columnas del footer */
+/* ========== COLUMNAS ========== */
 .footerColumn {
-  flex: 1;
-  min-width: 200px;
+  flex: 1 1 250px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   position: relative;
   z-index: 1;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-/* Animacion para las columnas */
+/* Animación columnas */
 .footerColumn:hover {
   transform: translateY(-5px);
   opacity: 0.9;
 }
 
-/* Títulos de las columnas */
+/* ========== TÍTULOS ========== */
 .footerColumn h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  text-align: center;
   position: relative;
-  overflow: hidden;
+  width: 100%;
+  padding-bottom: 0.5rem;
 }
 
-/* Línea bajo los títulos */
+/* Línea decorativa */
 .footerColumn h3::after {
   content: '';
   position: absolute;
@@ -62,115 +63,109 @@
   transition: transform 0.3s ease;
 }
 
-/* Efecto de la línea */
 .footerColumn h3:hover::after {
   transform: scaleX(2);
 }
 
-/* Párrafos en las columnas */
+/* ========== CONTENIDO ========== */
 .footerColumn p {
   font-size: 0.9rem;
   line-height: 1.5;
-  text-align: center;
   opacity: 0.8;
   transition: opacity 0.3s ease;
+  margin: 0.5rem 0;
 }
 
-/* Animacion para las columnas */
 .footerColumn p:hover {
   opacity: 1;
 }
 
-/* Botón */
+/* ========== ENLACES ========== */
+.footerColumn ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.footerColumn ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footerColumn ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footerColumn ul li a:hover {
+  color: #36c;
+  transform: translateX(8px);
+}
+
+/* ========== BOTÓN ========== */
 .footerButton {
   background-color: #36c;
   color: #fff;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1.5rem;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
   margin-top: 1rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
+  width: fit-content;
 }
 
-/* Animacion para el boton */
 .footerButton:hover {
   background-color: #2a58a5;
   transform: scale(1.05);
 }
 
-/* Lista de enlaces */
-.footerColumn ul {
-  list-style: none;
-  padding: 0;
-}
-
-/* Estilo para la lista de las columnas */
-.footerColumn ul li {
-  margin-bottom: 0.5rem;
-}
-
-/* Estilo para los textos del footer */
-.footerColumn ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-/* Animacion para los textos */
-.footerColumn ul li a:hover {
-  color: #36c;
-  transform: translateX(5px);
-}
-
-/* Redes sociales */
+/* ========== REDES SOCIALES ========== */
 .footerSocials {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-top: 1rem;
 }
 
-/* Texto de redes sociales */
 .footerSocials a {
   color: #fff;
-  font-size: 1.5rem;
-  transition: color 0.3s ease, transform 0.3s ease;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
 }
 
-/* Animacion para las redes sociales */
 .footerSocials a:hover {
   color: #36c;
-  transform: rotate(10deg);
+  transform: rotate(15deg) scale(1.1);
 }
 
-/* Barra inferior */
+/* ========== SECCIÓN INFERIOR ========== */
 .footerBottom {
   margin-top: 2rem;
   text-align: center;
   font-size: 0.8rem;
   border-top: 1px solid #444;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   position: relative;
   z-index: 1;
 }
 
-/* Estilo para el boton */
 .footerBottom a {
   color: #fff;
   text-decoration: none;
-  margin: 0 0.5rem;
-  transition: color 0.3s ease, transform 0.3s ease;
+  margin: 0 0.8rem;
+  transition: all 0.3s ease;
 }
 
-/* Animacion para el boton */
 .footerBottom a:hover {
   color: #36c;
   transform: scale(1.1);
 }
 
-/* Fondo animado */
+/* ========== FONDO ANIMADO ========== */
 .footer::before {
   content: '';
   position: absolute;
@@ -183,12 +178,67 @@
   z-index: 0;
 }
 
-/* Animación del fondo */
 @keyframes moveGradient {
   0% {
     transform: translate(-50%, -50%) scale(1);
   }
+
   100% {
     transform: translate(-45%, -45%) scale(1.1);
   }
 }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 0.5rem;
+    min-height: auto;
+  }
+
+  .footerContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .footerColumn {
+    flex: none;
+    width: 100%;
+    max-width: 300px;
+    padding: 0;
+  }
+
+  .footerColumn h3::after {
+    width: 30%;
+    left: 35%;
+  }
+
+  .footerSocials {
+    flex-wrap: wrap;
+  }
+
+  .footer::before {
+    animation: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerColumn {
+    padding: 1rem 0;
+  }
+
+  .footerButton {
+    width: 100%;
+  }
+
+  .footerBottom {
+    font-size: 0.7rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .footerBottom a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+} 
