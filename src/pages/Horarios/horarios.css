@@ -1,0 +1,264 @@
+/* Estilos Generales */
+.horarios-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.horarios-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.horarios-header h1 {
+    color: #36c;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #36c;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background: rgba(54, 192, 255, 0.1);
+    transform: translateX(-5px);
+}
+
+/* Contenedor Principal */
+.content-wrapper {
+    display: grid;
+    gap: 3rem;
+}
+
+/* Sección de Información */
+.info-section {
+    display: grid;
+    gap: 2rem;
+}
+
+.schedule-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.highlight-box {
+    background: #e8f4ff;
+    border-left: 4px solid #36c;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+}
+
+.time-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.time-slot {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #e0e0e0;
+    transition: transform 0.3s ease;
+}
+
+.time-slot:hover {
+    transform: translateY(-5px);
+    border-color: #36c;
+}
+
+.time {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #36c;
+}
+
+.slot-label {
+    color: #666;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.requirements-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.requirements-section li {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: #f5fbff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Proceso de Registro */
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.step {
+    position: relative;
+    padding: 2rem 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.step-number {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    background: #36c;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Sección del Mapa */
+.map-section {
+    margin-top: 2rem;
+}
+
+.map-container {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 500px;
+}
+
+.google-map {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    filter: grayscale(15%) contrast(105%);
+}
+
+.map-button {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #36c;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    z-index: 100;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.map-button:hover {
+    background: #2a58a5;
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* Nota Importante */
+.important-notice {
+    background: #fff3f3;
+    border-left: 4px solid #ff5252;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #b71c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .horarios-header h1 {
+        font-size: 2rem;
+    }
+
+    .map-container {
+        height: 400px;
+    }
+
+    .map-button {
+        width: 90%;
+        text-align: center;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .time-grid,
+    .steps-container {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-card {
+        padding: 1.5rem;
+    }
+
+    .important-notice {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.step {
+    animation: fadeInUp 0.6s ease backwards;
+}
+
+.step:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.step:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.step:nth-child(3) {
+    animation-delay: 0.5s;
+}

@@ -7,6 +7,7 @@ import Historia from './pages/Historia/historia.jsx';
 import Fotografias from './pages/Fotografias/fotografias.jsx';
 import Contactenos  from './pages/Contactenos/contactenos.jsx';   
 import Lugares from './pages/Lugares/lugares.jsx';
+import Horarios from './pages/Horarios/horarios.jsx';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/fotografias" element={<Fotografias />} />
             <Route path="/contactenos" element={<Contactenos />} />
             <Route path="/lugares" element={<Lugares />} />
+            <Route path="/horarios" element={<Horarios />} />
           </Routes>
         </main>
         
