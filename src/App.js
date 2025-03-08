@@ -5,6 +5,7 @@ import Home from './pages/Home/home.jsx';
 import Footer from './components/Footer/footer.jsx';
 import Historia from './pages/Historia/historia.jsx';
 import Fotografias from './pages/Fotografias/fotografias.jsx';
+import Contactenos  from './pages/Contactenos/contactenos.jsx';   
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/historia" element={<Historia />} />
             <Route path="/fotografias" element={<Fotografias />} />
+            <Route path="/contactenos" element={<Contactenos />} />
           </Routes>
         </main>
         
