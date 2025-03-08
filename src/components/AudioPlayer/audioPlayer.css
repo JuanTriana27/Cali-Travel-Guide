@@ -1,0 +1,44 @@
+.audioPlayer {
+    background: #fff;
+    border-radius: 25px;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 15px rgba(0, 119, 194, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    animation: slideUp 1s ease forwards;
+  }
+  
+  .playButton {
+    background: #0077c2;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .playButton:hover {
+    transform: scale(1.1);
+  }
+  
+  .audioTitle {
+    font-weight: 500;
+    color: #333;
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .audioPlayer {
+      margin: 1rem;
+      padding: 1rem;
+    }
+  }

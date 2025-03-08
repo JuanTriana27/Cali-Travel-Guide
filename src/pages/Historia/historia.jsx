@@ -1,22 +1,22 @@
 import React from 'react';
-import '../../pages/Historia/historia.css'; // Agrega estilos si los necesitas
-
-// Imagenes
+import '../../pages/Historia/historia.css';
+import AudioPlayer from '../../components/AudioPlayer/audioPlayer.jsx';
+import historiaAudio from '../../assets/audio/historia.mp3';
 import image4 from '../../assets/imagenes/Image4.jpg';
 
 const Historia = () => {
-  let imgSrc = image4;
   return (
     <div className="historia">
       <header className="historiaHeader">
         <h1 className="historiaTitle">Cristo Rey</h1>
         <p className="historiaSubtitle">Descubre los orígenes y el legado de este icónico monumento.</p>
+        <AudioPlayer audioSrc={historiaAudio} />
       </header>
 
       <section className="historiaContent">
         <div className="historiaImageContainer">
           <img
-            src={imgSrc}
+            src={image4}
             alt="Cristo Rey"
             className="historiaImage"
           />

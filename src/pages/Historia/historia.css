@@ -13,7 +13,7 @@
   background: linear-gradient(135deg, #42a5f5, #0077c2);
   color: white;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 2rem 3rem 2rem;
   animation: slideDown 1.2s ease-in-out;
 }
 
@@ -27,7 +27,47 @@
   font-size: 1.2rem;
   font-weight: 300;
   margin-top: 0;
+  margin-bottom: 1.5rem;
   animation: fadeInSubtitle 2s ease forwards;
+}
+
+/* Reproductor de Audio */
+.audioPlayer {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 25px;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 15px rgba(0, 119, 194, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 0 auto;
+  max-width: 600px;
+  animation: slideUp 1s ease forwards;
+}
+
+.playButton {
+  background: #0077c2;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playButton:hover {
+  transform: scale(1.1);
+}
+
+.audioTitle {
+  font-weight: 500;
+  color: #333;
+  font-size: 1.1rem;
 }
 
 /* Contenido principal */
@@ -119,18 +159,7 @@
   margin-right: 0.5rem;
 }
 
-/* Footer */
-.historiaFooter {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  margin-top: 2rem;
-  animation: fadeIn 2s ease;
-}
-
-/* Solo en dispositivos móviles */
+/* Responsive */
 @media (max-width: 768px) {
   .historiaContent {
     flex-wrap: wrap;
@@ -143,17 +172,22 @@
   .historiaText {
     flex: 1 1 100%;
   }
+
+  .audioPlayer {
+    margin: 0 1rem;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .historiaHeader {
+    padding: 1.5rem 1rem 2.5rem 1rem;
+  }
 }
 
 /* Animaciones */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideDown {
@@ -161,7 +195,6 @@
     transform: translateY(-50px);
     opacity: 0;
   }
-
   to {
     transform: translateY(0);
     opacity: 1;
@@ -173,7 +206,6 @@
     opacity: 0;
     transform: translateY(-20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -185,7 +217,6 @@
     opacity: 0;
     transform: translateY(10px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -197,7 +228,6 @@
     opacity: 0;
     transform: translateX(-20px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
@@ -209,7 +239,6 @@
     transform: translateY(50px);
     opacity: 0;
   }
-
   to {
     transform: translateY(0);
     opacity: 1;
@@ -221,7 +250,6 @@
     opacity: 0;
     transform: translateX(-20px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
