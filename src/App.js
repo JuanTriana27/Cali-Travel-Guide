@@ -5,9 +5,10 @@ import Home from './pages/Home/home.jsx';
 import Footer from './components/Footer/footer.jsx';
 import Historia from './pages/Historia/historia.jsx';
 import Fotografias from './pages/Fotografias/fotografias.jsx';
-import Contactenos  from './pages/Contactenos/contactenos.jsx';   
+import Contactenos from './pages/Contactenos/contactenos.jsx';
 import Lugares from './pages/Lugares/lugares.jsx';
 import Horarios from './pages/Horarios/horarios.jsx';
+import Recorrido from './pages/Recorrido/recorridoVirtual.jsx';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         padding: 0
       }}>
         <Navbar />
-        
+
         <main style={{
           flex: 1,
           width: '100%',
@@ -34,9 +35,10 @@ function App() {
             <Route path="/contactenos" element={<Contactenos />} />
             <Route path="/lugares" element={<Lugares />} />
             <Route path="/horarios" element={<Horarios />} />
+            <Route path="/recorrido" element={<Recorrido />} />
           </Routes>
         </main>
-        
+
         <Footer />
       </div>
     </Router>

@@ -15,7 +15,7 @@ const Card = ({ title, subtitle, link }) => {
   } else if (title === "RECORRIDO") {
     imgSrc = recorrido;
   } else if (title === "FOTOGRAFÍAS") {
-    imgSrc = fotografias;
+    imgSrc = fotografias; 
   }
 
   // Retornamos la estructura HTML de la tarjeta

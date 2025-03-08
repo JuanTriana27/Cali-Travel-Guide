@@ -4,7 +4,7 @@ import '../../pages/Home/home.css';
 
 const Home = () => (
   <div className="home">
-    <Card title="RECORRIDO" subtitle="Explora" />
+    <Card title="RECORRIDO" subtitle="Explora" link="recorrido"/>
     <Card title="HISTORIA" subtitle="Conoce" link="/historia" />
     <Card title="FOTOGRAFÍAS" subtitle="Mira" link="fotografias" />
   </div>
