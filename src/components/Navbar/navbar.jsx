@@ -14,7 +14,7 @@ const Navbar = () => (
     {/* Menú */}
     <ul className="navbarMenu" id="menuIconAcction">
       <li><Link to="/" className="navbarLink">INICIO</Link></li> {/* Redirige al Home */}
-      <li>LUGARES</li>
+      <li><Link to="/lugares" className="navbarLink">LUGARES</Link></li>
       <li><Link to="/contactenos" className="navbarLink">CONTACTENOS</Link></li>
     </ul>
   </nav>

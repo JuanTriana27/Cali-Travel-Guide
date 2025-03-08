@@ -1,4 +1,4 @@
-/* Estilos generales de la navbar */
+/* ========== NAVBAR ========== */
 .navbar {
   height: 80px;
   display: flex;
@@ -9,46 +9,36 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-/* Estilos para el logo */
+/* ========== LOGO ========== */
 .navbarTittle {
   display: flex;
   align-items: center;
   text-decoration: none;
   color: #FFFFFF;
+  transition: transform 0.3s ease;
 }
 
-/* Estilos para el logo */
 .navbarTittle h1 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  cursor: pointer;
   font-size: 1.4rem;
   font-weight: bold;
-  color: #FFFFFF;
   margin: 0;
-  transition: color 0.3s ease;
-}
-
-/* Cambiar color de letra */
-.navbar h1:hover {
-  color: #000000;
-}
-
-/* Estilo de los enlaces dentro de .navbarMenu */
-.navbarMenu a {
-  text-decoration: none;
   color: #FFFFFF;
   transition: color 0.3s ease;
 }
 
-/* Cambiar color de letra */
-.navbarMenu a:hover {
+.navbarTittle:hover {
+  transform: scale(1.05);
+}
+
+.navbarTittle:hover h1 {
   color: #000000;
 }
 
-/* Estilos para el menú de navegación */
+/* ========== MENÚ PRINCIPAL ========== */
 .navbarMenu {
   display: flex;
   list-style: none;
@@ -56,23 +46,27 @@
   padding: 0;
 }
 
-/* Estilos de las opciones */
 .navbarMenu li {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  cursor: pointer;
   position: relative;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1rem;
   color: #FFFFFF;
   font-weight: 500;
   padding: 0.5rem 1rem;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Cambiar color de letra */
+.navbarMenu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Animación hover desktop */
 .navbarMenu li:hover {
   color: #000000;
-  background-color: rgba(255, 255, 255, 0.3);
-  animation: bounce 0.5s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
 }
 
 /* Subrayado animado */
@@ -84,94 +78,100 @@
   width: 0;
   height: 2px;
   background-color: #FFFFFF;
-  transition: width 0.3s ease;
+  transition: width 0.4s ease;
 }
 
-/* Ancho del subrayado */
 .navbarMenu li:hover::after {
   width: 100%;
 }
 
-/* Botón del menú hamburguesa */
-#menuIcon {
-  display: none;
-  font-size: 35px;
-  z-index: 101;
-  cursor: pointer;
-  color: #FFFFFF;
-}
-
-/* Ocultar checkbox del menú */
+/* ========== TOGGLE HAMBURGUESA ========== */
 #menuToggle {
   display: none;
 }
 
-/* Estilos para el menú desplegable en móviles */
+#menuIcon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #FFFFFF;
+  transition: transform 0.4s ease;
+}
+
+#menuToggle:checked ~ #menuIcon {
+  transform: rotate(90deg);
+}
+
+/* ========== VERSIÓN MÓVIL ========== */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+  }
 
-  /* Estilo para el Navbar */
   .navbarMenu {
-    display: none;
-    flex-direction: column;
     position: absolute;
-    top: 80px;
+    top: 100%;
     right: 0;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
     background-color: #36c;
-    padding: 1rem;
-    border-radius: 8px;
-    transform: translateY(-20px);
+    border-radius: 0 0 0 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    padding: 1rem 0;
     opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateY(-20px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
   }
 
-  /* Estilo para las opciones */
-  #menuToggle:checked~.navbarMenu {
-    display: flex;
-    transform: translateY(0);
+  #menuToggle:checked ~ .navbarMenu {
     opacity: 1;
-    animation: slideDown 0.5s ease-in-out;
+    transform: translateY(0);
+    pointer-events: all;
   }
 
-  /* Estilo para las opciones */
   .navbarMenu li {
+    width: 100%;
     text-align: center;
-    padding: 0.5rem 0;
+    padding: 1rem;
+    margin: 0;
+    background-color: transparent !important;
   }
 
-  /* Subrayado animado */
   .navbarMenu li::after {
-    bottom: -2px;
-    background-color: #000000;
+    display: none;
   }
 
-  /* Estilo para el botón del menú hamburguesa */
+  .navbarMenu li:hover {
+    transform: translateX(10px);
+    color: #000000;
+  }
+
   #menuIcon {
     display: block;
   }
 }
 
-/* Keyframes para la animación de deslizamiento */
-@keyframes slideDown {
+/* ========== ANIMACIONES ========== */
+@keyframes slideIn {
   from {
-    transform: translateY(-20px);
     opacity: 0;
+    transform: translateY(-10px);
   }
-
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Keyframes para el efecto bounce */
-@keyframes bounce {
-
-  0%,
-  100% {
-    transform: translateY(0);
+/* Animación items del menú móvil */
+@media (max-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .navbarMenu li {
+    animation: slideIn 0.4s ease backwards;
   }
-
-  50% {
-    transform: translateY(-5px);
-  }
+  
+  .navbarMenu li:nth-child(1) { animation-delay: 0.1s; }
+  .navbarMenu li:nth-child(2) { animation-delay: 0.2s; }
+  .navbarMenu li:nth-child(3) { animation-delay: 0.3s; }
 }
