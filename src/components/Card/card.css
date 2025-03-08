@@ -1,14 +1,6 @@
-/* Eliminar todos los márgenes y paddings innecesarios */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /* Estilo general de card */
 .card {
   width: 100%;
-  height: 615px;
   position: relative;
   grid-row: span 1;
   cursor: pointer;
@@ -21,8 +13,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.6;
-  transition: opacity 0.3s easy;
+  position: absolute;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
 }
 
 /* Animacion para las imagenes dentro de card*/
