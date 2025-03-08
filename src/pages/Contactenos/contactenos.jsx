@@ -21,29 +21,40 @@ const Contactenos = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSending(true);
 
-    emailjs.send(
-      'service_0mtghnm',
-      'template_bx4u3em',
-      {
-        from_name: formData.name,
-        reply_to: formData.email,
-        message: formData.message,
-        to_email: 'trianajuan28@gmail.com'
-      }
-    )
-    .then(() => {
-      alert('🎉 Mensaje enviado con éxito!');
+    try {
+      // 1. Guardar en MongoDB
+      const dbResponse = await fetch('/.netlify/functions/saveContact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      if (!dbResponse.ok) throw new Error('Error al guardar');
+
+      // 2. Enviar email (tu código actual)
+      await emailjs.send(
+        'service_0mtghnm',
+        'template_bx4u3em',
+        {
+          from_name: formData.name,
+          reply_to: formData.email,
+          message: formData.message,
+          to_email: 'trianajuan28@gmail.com'
+        }
+      );
+
+      alert('🎉 Mensaje enviado y guardado!');
       setFormData({ name: '', email: '', message: '' });
-    })
-    .catch((error) => {
-      console.error('Error detallado:', error);
-      alert('❌ Error: ' + error.text || 'Intenta nuevamente');
-    })
-    .finally(() => setIsSending(false));
+
+    } catch (error) {
+      alert(`❌ Error: ${error.message}`);
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -52,7 +63,7 @@ const Contactenos = () => {
         {/* Sección del Formulario */}
         <div className="form-section">
           <h2>Escríbenos</h2>
-          
+
           <form onSubmit={handleSubmit}>
             <div className="input-group">
               <label>Nombre completo</label>
@@ -90,8 +101,8 @@ const Contactenos = () => {
               ></textarea>
             </div>
 
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               className="submit-btn"
               disabled={isSending}
             >
@@ -103,12 +114,12 @@ const Contactenos = () => {
         {/* Sección de Información de Contacto */}
         <div className="info-section">
           <h3>Contacto Directo</h3>
-          
+
           <div className="contact-item">
             <i className="fas fa-map-marker-alt"></i>
             <div>
               <h4>Oficina Principal</h4>
-              <p>Carrera 24 #52-01<br/>Cali, Valle del Cauca</p>
+              <p>Carrera 24 #52-01<br />Cali, Valle del Cauca</p>
             </div>
           </div>
 
@@ -132,7 +143,7 @@ const Contactenos = () => {
             <i className="fas fa-clock"></i>
             <div>
               <h4>Horarios</h4>
-              <p>Lun-Vie: 8AM - 6PM<br/>Sáb: 9AM - 1PM</p>
+              <p>Lun-Vie: 8AM - 6PM<br />Sáb: 9AM - 1PM</p>
             </div>
           </div>
         </div>
