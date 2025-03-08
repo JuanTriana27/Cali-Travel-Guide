@@ -3,9 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/navbar.jsx';
 import Home from './pages/Home/home.jsx';
 import Footer from './components/Footer/footer.jsx';
-import Historia from './pages/Historia/historia.jsx'; // Asegúrate de tener esta página creada
-import Fotografias from './pages/Fotografias/fotografias.jsx'; // Asegúrate de tener esta página creada
-
+import Historia from './pages/Historia/historia.jsx'; 
+import Fotografias from './pages/Fotografias/fotografias.jsx'; 
 function App() {
   return (
     <Router>

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../pages/Fotografias/fotografias.css'; // Asegúrate de que el archivo CSS esté enlazado correctamente
+import '../../pages/Fotografias/fotografias.css'; 
 
 // Importa las imágenes
 import image1 from '../../assets/imagenes/Image1.jpg';
