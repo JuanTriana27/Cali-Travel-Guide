@@ -31,7 +31,7 @@
 }
 
 .form-section h2 {
-    color: #2a58a5;
+    color: #A60321;
     margin-bottom: 2rem;
     font-size: 2rem;
 }
@@ -59,12 +59,12 @@
 
 .input-group input:focus,
 .input-group textarea:focus {
-    border-color: #2a58a5;
+    border-color: #A60321;
     outline: none;
 }
 
 .submit-btn {
-    background: #2a58a5;
+    background: #A60321;
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -76,7 +76,7 @@
 }
 
 .submit-btn:hover {
-    background: #1e3d6b;
+    background: #A60321;
     transform: translateY(-2px);
 }
 
@@ -88,7 +88,7 @@
 }
 
 .info-section h3 {
-    color: #2a58a5;
+    color: #A60321;
     margin-bottom: 2rem;
     font-size: 1.5rem;
 }
@@ -102,7 +102,7 @@
 
 .contact-item i {
     font-size: 1.5rem;
-    color: #2a58a5;
+    color: #A60321;
     min-width: 40px;
     text-align: center;
 }
@@ -133,7 +133,7 @@
 
 .error {
     background: #f8d7da;
-    color: #721c24;
+    color: #A60321;
     border: 1px solid #f5c6cb;
 }
 

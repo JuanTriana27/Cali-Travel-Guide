@@ -13,7 +13,7 @@
 }
 
 .horarios-header h1 {
-    color: #36c;
+    color: #A60321;
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
@@ -22,7 +22,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    color: #36c;
+    color: #A60321;
     text-decoration: none;
     font-weight: 500;
     padding: 0.8rem 1.5rem;
@@ -56,7 +56,7 @@
 
 .highlight-box {
     background: #e8f4ff;
-    border-left: 4px solid #36c;
+    border-left: 4px solid #A60321;
     padding: 1.5rem;
     margin: 1.5rem 0;
     border-radius: 8px;
@@ -80,14 +80,14 @@
 
 .time-slot:hover {
     transform: translateY(-5px);
-    border-color: #36c;
+    border-color: #A60321;
 }
 
 .time {
     display: block;
     font-size: 2rem;
     font-weight: 700;
-    color: #36c;
+    color: #A60321;
 }
 
 .slot-label {
@@ -123,7 +123,7 @@
 .step {
     position: relative;
     padding: 2rem 1.5rem;
-    background: white;
+    background: #F2F2F2;
     border-radius: 12px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
@@ -132,8 +132,8 @@
     position: absolute;
     top: -15px;
     left: -15px;
-    background: #36c;
-    color: white;
+    background: #A60321;
+    color: #F2F2F2;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -168,8 +168,8 @@
     bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
-    background: #36c;
-    color: white;
+    background: #A60321;
+    color: #F2F2F2;
     padding: 12px 25px;
     border-radius: 30px;
     text-decoration: none;
@@ -182,13 +182,13 @@
 }
 
 .map-button:hover {
-    background: #2a58a5;
+    background: #A60321;
     transform: translateX(-50%) scale(1.05);
 }
 
 /* Nota Importante */
 .important-notice {
-    background: #fff3f3;
+    background: #F2F2F2;
     border-left: 4px solid #ff5252;
     padding: 1.5rem;
     margin-top: 3rem;

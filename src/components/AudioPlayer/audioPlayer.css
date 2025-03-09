@@ -12,7 +12,7 @@
   }
   
   .playButton {
-    background: #0077c2;
+    background: #A60321;
     border: none;
     border-radius: 50%;
     width: 45px;
@@ -28,7 +28,7 @@
   }
   
   .playButton:hover {
-    background: #005fa3;
+    background: #A60321;
     transform: scale(1.05);
   }
   
@@ -68,7 +68,7 @@
   
   .progress {
     height: 100%;
-    background: #0077c2;
+    background: #A60321;
     border-radius: 2px;
     transition: width 0.1s linear;
   }

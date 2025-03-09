@@ -4,8 +4,8 @@ import '../Card/card.css'; // Importamos el archivo de estilos
 
 // Importamos las imágenes que se mostrarán en las tarjetas
 import recorrido from '../../assets/imagenes/Recorrido.jpg';
-import fotografias from '../../assets/imagenes/CristoRey.jpg';
-import cristoRey from '../../assets/imagenes/Fotografias.jpg';
+import fotografias from '../../assets/imagenes/Historia.jpg';
+import cristoRey from '../../assets/imagenes/Fotografia.jpg';
 
 // Creamos el componente Card
 const Card = ({ title, subtitle, link }) => {
@@ -15,7 +15,7 @@ const Card = ({ title, subtitle, link }) => {
   } else if (title === "RECORRIDO") {
     imgSrc = recorrido;
   } else if (title === "FOTOGRAFÍAS") {
-    imgSrc = fotografias; 
+    imgSrc = fotografias;
   }
 
   // Retornamos la estructura HTML de la tarjeta

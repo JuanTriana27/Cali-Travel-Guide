@@ -10,7 +10,7 @@
 
 /* Encabezado */
 .historiaHeader {
-  background: linear-gradient(135deg, #42a5f5, #0077c2);
+  background: linear-gradient(135deg, #b32a43, #A60321);
   color: white;
   text-align: center;
   padding: 2rem 2rem 3rem 2rem;
@@ -46,7 +46,7 @@
 }
 
 .playButton {
-  background: #0077c2;
+  background: #A60321;
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -149,13 +149,13 @@
   top: 0.5rem;
   width: 10px;
   height: 10px;
-  background: #0077c2;
+  background: #A60321;
   border-radius: 50%;
 }
 
 .year {
   font-weight: bold;
-  color: #0077c2;
+  color: #0D0D0D;
   margin-right: 0.5rem;
 }
 
