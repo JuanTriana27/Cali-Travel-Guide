@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { useTranslation } from 'react-i18next';
 import './contactenos.css';
 
-// Configuración EmailJS con tus IDs reales
+// Inicializa EmailJS con tu ID
 emailjs.init('ocCME3mw3tE_Fhlkk');
 
 const Contactenos = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
-
   const [isSending, setIsSending] = useState(false);
 
   const handleChange = (e) => {
@@ -26,16 +27,15 @@ const Contactenos = () => {
     setIsSending(true);
 
     try {
-      // 1. Guardar en MongoDB
+      // Guardar en MongoDB
       const dbResponse = await fetch('/.netlify/functions/saveContact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       });
-
       if (!dbResponse.ok) throw new Error('Error al guardar');
 
-      // 2. Enviar email (tu código actual)
+      // Enviar email
       await emailjs.send(
         'service_0mtghnm',
         'template_bx4u3em',
@@ -47,11 +47,10 @@ const Contactenos = () => {
         }
       );
 
-      alert('🎉 Mensaje enviado y guardado!');
+      alert(t('contactenos.success'));
       setFormData({ name: '', email: '', message: '' });
-
     } catch (error) {
-      alert(`❌ Error: ${error.message}`);
+      alert(`${t('contactenos.error')}: ${error.message}`);
     } finally {
       setIsSending(false);
     }
@@ -62,88 +61,80 @@ const Contactenos = () => {
       <div className="contact-card">
         {/* Sección del Formulario */}
         <div className="form-section">
-          <h2>Escríbenos</h2>
-
+          <h2>{t('contactenos.writeUs')}</h2>
           <form onSubmit={handleSubmit}>
             <div className="input-group">
-              <label>Nombre completo</label>
+              <label>{t('contactenos.fullName')}</label>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Tu nombre completo"
+                placeholder={t('contactenos.fullNamePlaceholder')}
                 required
               />
             </div>
-
             <div className="input-group">
-              <label>Correo electrónico</label>
+              <label>{t('contactenos.email')}</label>
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="tucorreo@ejemplo.com"
+                placeholder={t('contactenos.emailPlaceholder')}
                 required
               />
             </div>
-
             <div className="input-group">
-              <label>Tu mensaje</label>
+              <label>{t('contactenos.message')}</label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Escribe tu mensaje aquí..."
+                placeholder={t('contactenos.messagePlaceholder')}
                 rows="5"
                 required
               ></textarea>
             </div>
-
             <button
               type="submit"
               className="submit-btn"
               disabled={isSending}
             >
-              {isSending ? 'Enviando...' : 'Enviar Mensaje'}
+              {isSending ? t('contactenos.sending') : t('contactenos.send')}
             </button>
           </form>
         </div>
 
         {/* Sección de Información de Contacto */}
         <div className="info-section">
-          <h3>Contacto Directo</h3>
-
+          <h3>{t('contactenos.directContact')}</h3>
           <div className="contact-item">
             <i className="fas fa-map-marker-alt"></i>
             <div>
-              <h4>Oficina Principal</h4>
-              <p>Carrera 24 #52-01<br />Cali, Valle del Cauca</p>
+              <h4>{t('contactenos.mainOffice')}</h4>
+              <p>{t('contactenos.address')}</p>
             </div>
           </div>
-
           <div className="contact-item">
             <i className="fas fa-phone-alt"></i>
             <div>
-              <h4>Teléfono</h4>
-              <p>+57 (602) 555-1234</p>
+              <h4>{t('contactenos.phone')}</h4>
+              <p>{t('contactenos.phoneNumber')}</p>
             </div>
           </div>
-
           <div className="contact-item">
             <i className="fas fa-envelope"></i>
             <div>
-              <h4>Correo Electrónico</h4>
-              <p>contacto@calitravelguide.com</p>
+              <h4>{t('contactenos.emailTitle')}</h4>
+              <p>{t('contactenos.emailAddress')}</p>
             </div>
           </div>
-
           <div className="contact-item">
             <i className="fas fa-clock"></i>
             <div>
-              <h4>Horarios</h4>
-              <p>Lun-Vie: 8AM - 6PM<br />Sáb: 9AM - 1PM</p>
+              <h4>{t('contactenos.hours')}</h4>
+              <p>{t('contactenos.hoursText')}</p>
             </div>
           </div>
         </div>

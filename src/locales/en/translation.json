@@ -1,0 +1,115 @@
+{
+    "navbar": {
+        "inicio": "HOME",
+        "lugares": "PLACES",
+        "contactenos": "CONTACT US",
+        "idioma": "LANGUAGE"
+    },
+    "titulo": "CALI TRAVEL GUIDE",
+    "home": {
+        "recorrido": {
+            "title": "TOUR",
+            "subtitle": "Explore"
+        },
+        "historia": {
+            "title": "HISTORY",
+            "subtitle": "Learn"
+        },
+        "fotografias": {
+            "title": "PHOTOGRAPHS",
+            "subtitle": "View"
+        }
+    },
+    "footer": {
+        "visitUs": "Visit Us",
+        "addressLine1": "Cristo Rey Monument",
+        "addressLine2": "Cali, Valle del Cauca",
+        "addressLine3": "Colombia",
+        "moreInfo": "More Info",
+        "usefulLinks": "Useful Links",
+        "schedule": "Schedule",
+        "gallery": "Gallery",
+        "contactUs": "Contact Us",
+        "socialMedia": "Social Media",
+        "copyRight": "Cali Travel Guide © 2024",
+        "privacyPolicy": "Privacy Policy",
+        "termsConditions": "Terms and Conditions"
+    },
+    "historia": {
+        "title": "Cristo Rey",
+        "subtitle": "Discover the origins and legacy of this iconic monument.",
+        "historyHeading": "A Bit of History",
+        "historyParagraph1": "The Cristo Rey monument is one of the most recognized tourist spots in the region. Built in 1953, this site offers an incredible panoramic view of the city of Cali.",
+        "historyParagraph2": "Designed as a symbol of peace, the monument stands 26 meters tall and attracts thousands of visitors every year, who admire not only its architecture but also its natural surroundings."
+    },
+    "horarios": {
+        "title": "Ecopark Cristo Rey - Visit 2025",
+        "backLink": "← Back to Places",
+        "scheduleTitle": "Visiting Hours",
+        "reopenLabel": "Reopening",
+        "reopenDate": "January 2, 2025",
+        "adminLabel": "Administration",
+        "adminName": "Dagma",
+        "entryLabel": "Admission",
+        "entryInfo": "Free with prior registration",
+        "firstShift": "First Shift",
+        "middayShift": "Midday Shift",
+        "afternoonShift": "Afternoon Shift",
+        "note": "* Please arrive 15 minutes before your scheduled time",
+        "requirementsTitle": "Mandatory Requirements",
+        "req1": "Prior registration on the web platform",
+        "req2": "Original identity document",
+        "req3": "Pets must have collar and leash",
+        "registrationTitle": "Registration Process",
+        "regStep1": "Visit the official portal:",
+        "regStep2": "Fill out the form at:",
+        "regStep3": "Download your valid QR for up to 4 people",
+        "mapTitle": "Exact Location",
+        "mapButton": "View Exact Location",
+        "importantNotice": "Hours are subject to change due to weather conditions. Check for updates before your visit."
+    },
+    "lugares": {
+        "title": "Available Places",
+        "cristoReyAlt": "Cristo Rey",
+        "cristoReyTitle": "Cristo Rey",
+        "cristoReyDescription": "The iconic monument watching over the city from the hills",
+        "details": "View Details",
+        "comingSoonTitle": "Coming Soon",
+        "comingSoonDescription": "We're working to add more landmark places"
+    },
+    "contactenos": {
+        "writeUs": "Write to Us",
+        "fullName": "Full Name",
+        "fullNamePlaceholder": "Your full name",
+        "email": "Email",
+        "emailPlaceholder": "youremail@example.com",
+        "message": "Your Message",
+        "messagePlaceholder": "Write your message here...",
+        "sending": "Sending...",
+        "send": "Send Message",
+        "success": "🎉 Message sent and saved!",
+        "error": "❌ Error",
+        "directContact": "Direct Contact",
+        "mainOffice": "Main Office",
+        "address": "Carrera 24 #52-01\nCali, Valle del Cauca",
+        "phone": "Phone",
+        "phoneNumber": "+57 (602) 555-1234",
+        "emailTitle": "Email",
+        "emailAddress": "contact@calitravelguide.com",
+        "hours": "Hours",
+        "hoursText": "Mon-Fri: 8AM - 6PM\nSat: 9AM - 1PM"
+    },
+    "fotografias": {
+        "title": "Photographs",
+        "subtitle": "Explore unique moments captured in images.",
+        "prev": "Previous",
+        "next": "Next",
+        "congratulations": "Congratulations, you've seen all the photographs!",
+        "imageAlt1": "Photo 1",
+        "imageAlt2": "Photo 2",
+        "imageAlt3": "Photo 3",
+        "imageAlt4": "Photo 4",
+        "imageAlt5": "Photo 5",
+        "imageAlt6": "Photo 6"
+    }
+}

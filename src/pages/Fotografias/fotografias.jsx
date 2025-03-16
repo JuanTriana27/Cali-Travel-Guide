@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import '../../pages/Fotografias/fotografias.css';
 
 // Importa las imágenes
@@ -10,47 +11,42 @@ import image5 from '../../assets/imagenes/Image5.jpg';
 import image6 from '../../assets/imagenes/Image6.jpg';
 
 const Fotografias = () => {
-    // Array de imágenes con las importaciones
+    const { t } = useTranslation();
+
+    // Array de imágenes con traducciones para los alt
     const images = [
-        { src: image1, alt: 'Foto 1' },
-        { src: image2, alt: 'Foto 2' },
-        { src: image3, alt: 'Foto 3' },
-        { src: image4, alt: 'Foto 4' },
-        { src: image5, alt: 'Foto 5' },
-        { src: image6, alt: 'Foto 6' },
+        { src: image1, alt: t('fotografias.imageAlt1') },
+        { src: image2, alt: t('fotografias.imageAlt2') },
+        { src: image3, alt: t('fotografias.imageAlt3') },
+        { src: image4, alt: t('fotografias.imageAlt4') },
+        { src: image5, alt: t('fotografias.imageAlt5') },
+        { src: image6, alt: t('fotografias.imageAlt6') },
     ];
 
-    // Estado para controlar la imagen actual
     const [currentIndex, setCurrentIndex] = useState(0);
-    // Estado para llevar registro de los índices ya visitados
     const [visited, setVisited] = useState(new Set([0]));
 
-    // Cada vez que cambia la imagen actual, se agrega el índice a "visited"
     useEffect(() => {
         setVisited((prevVisited) => new Set(prevVisited).add(currentIndex));
     }, [currentIndex]);
 
-    // Función para pasar a la siguiente imagen
     const nextImage = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     };
 
-    // Función para volver a la imagen anterior
     const previousImage = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     };
 
-    // Calcula el progreso en porcentaje
     const progress = (visited.size / images.length) * 100;
-    // Comprueba si se han visto todas las imágenes
     const allVisited = visited.size === images.length;
 
     return (
         <div className="fotografias">
             <header className="fotografiasHeader">
-                <h1 className="fotografiasTitle">Fotografías</h1>
+                <h1 className="fotografiasTitle">{t('fotografias.title')}</h1>
                 <p className="fotografiasSubtitle">
-                    Explora momentos únicos capturados en imágenes.
+                    {t('fotografias.subtitle')}
                 </p>
             </header>
 
@@ -63,22 +59,23 @@ const Fotografias = () => {
                     />
                 </div>
                 <div className="sliderButtons">
-                    <button className="prevButton" onClick={previousImage}>Anterior</button>
-                    <button className="nextButton" onClick={nextImage}>Siguiente</button>
+                    <button className="prevButton" onClick={previousImage}>
+                      {t('fotografias.prev')}
+                    </button>
+                    <button className="nextButton" onClick={nextImage}>
+                      {t('fotografias.next')}
+                    </button>
                 </div>
 
-                {/* Barra de progreso */}
                 <div className="progressContainer">
-                    <div className="progressBar" style={{ textAlign: 'center',  width: `${progress}%` }}>
+                    <div className="progressBar" style={{ textAlign: 'center', width: `${progress}%` }}>
                         <span className="progressText">{Math.round(progress)}%</span>
                     </div>
                 </div>
 
-
-                {/* Mensaje de felicitación */}
                 {allVisited && (
                     <div className="congratulations">
-                        ¡Felicidades, viste todas las imágenes!
+                        {t('fotografias.congratulations')}
                     </div>
                 )}
             </section>

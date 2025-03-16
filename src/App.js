@@ -1,5 +1,7 @@
+// App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './i18n';
 import Navbar from './components/Navbar/navbar.jsx';
 import Home from './pages/Home/home.jsx';
 import Footer from './components/Footer/footer.jsx';

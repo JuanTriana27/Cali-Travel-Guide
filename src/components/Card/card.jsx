@@ -8,13 +8,14 @@ import fotografias from '../../assets/imagenes/Historia.jpg';
 import cristoRey from '../../assets/imagenes/Fotografia.jpg';
 
 // Creamos el componente Card
-const Card = ({ title, subtitle, link }) => {
+// Se agrega la prop "imageKey" para identificar la imagen de forma fija
+const Card = ({ title, subtitle, link, imageKey }) => {
   let imgSrc;
-  if (title === "HISTORIA") {
+  if (imageKey === "historia") {
     imgSrc = cristoRey;
-  } else if (title === "RECORRIDO") {
+  } else if (imageKey === "recorrido") {
     imgSrc = recorrido;
-  } else if (title === "FOTOGRAFÍAS") {
+  } else if (imageKey === "fotografias") {
     imgSrc = fotografias;
   }
 
@@ -36,5 +37,4 @@ const Card = ({ title, subtitle, link }) => {
   );
 };
 
-// Exportamos el componente Card
 export default Card;

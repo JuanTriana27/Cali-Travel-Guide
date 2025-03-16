@@ -85,6 +85,22 @@
   width: 100%;
 }
 
+.languageSelect {
+  background: transparent;
+  border: none;
+  color: #F2F2F2;
+  cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1rem;
+  color: #F2F2F2;
+  font-weight: 500;
+}
+
+.languageSelect:focus {
+  outline: none;
+  color: #000;
+}
+
 /* ========== TOGGLE HAMBURGUESA ========== */
 #menuToggle {
   display: none;

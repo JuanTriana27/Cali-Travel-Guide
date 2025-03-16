@@ -1,0 +1,116 @@
+{
+    "navbar": {
+      "inicio": "INÍCIO",
+      "lugares": "LOCAIS",
+      "contactenos": "CONTATO",
+      "idioma": "IDIOMA"
+    },
+    "titulo": "CALI TRAVEL GUIDE",
+    "home": {
+      "recorrido": {
+        "title": "TOUR",
+        "subtitle": "Explorar"
+      },
+      "historia": {
+        "title": "HISTÓRIA",
+        "subtitle": "Aprender"
+      },
+      "fotografias": {
+        "title": "FOTOGRAFIAS",
+        "subtitle": "Visualizar"
+      }
+    },
+    "footer": {
+      "visitUs": "Visite-nos",
+      "addressLine1": "Monumento Cristo Rei",
+      "addressLine2": "Cali, Valle del Cauca",
+      "addressLine3": "Colômbia",
+      "moreInfo": "Mais Informações",
+      "usefulLinks": "Links Úteis",
+      "schedule": "Horários",
+      "gallery": "Galeria",
+      "contactUs": "Contato",
+      "socialMedia": "Redes Sociais",
+      "copyRight": "Cali Travel Guide © 2024",
+      "privacyPolicy": "Política de Privacidade",
+      "termsConditions": "Termos e Condições"
+    },
+    "historia": {
+      "title": "Cristo Rei",
+      "subtitle": "Descubra as origens e o legado deste monumento icônico.",
+      "historyHeading": "Um Pouco de História",
+      "historyParagraph1": "O monumento do Cristo Rei é um dos pontos turísticos mais reconhecidos da região. Construído em 1953, este local oferece uma vista panorâmica incrível da cidade de Cali.",
+      "historyParagraph2": "Projetado como um símbolo de paz, o monumento tem 26 metros de altura e atrai milhares de visitantes todos os anos, que admiram não só sua arquitetura, mas também o ambiente natural que o cerca."
+    },
+    "horarios": {
+      "title": "Ecoparque Cristo Rei - Visite 2025",
+      "backLink": "← Voltar aos Locais",
+      "scheduleTitle": "Horários de Visita",
+      "reopenLabel": "Reabertura",
+      "reopenDate": "2 de Janeiro de 2025",
+      "adminLabel": "Administração",
+      "adminName": "Dagma",
+      "entryLabel": "Entrada",
+      "entryInfo": "Gratuita com registro prévio",
+      "firstShift": "Primeiro Turno",
+      "middayShift": "Turno do Meio-dia",
+      "afternoonShift": "Turno da Tarde",
+      "note": "* Por favor, chegue 15 minutos antes do horário agendado",
+      "requirementsTitle": "Requisitos Obrigatórios",
+      "req1": "Registro prévio na plataforma web",
+      "req2": "Documento de identidade original",
+      "req3": "Animais devem estar com coleira e guia",
+      "registrationTitle": "Processo de Registro",
+      "regStep1": "Visite o portal oficial:",
+      "regStep2": "Preencha o formulário em:",
+      "regStep3": "Baixe seu QR válido para até 4 pessoas",
+      "mapTitle": "Localização Exata",
+      "mapButton": "Ver Localização Exata",
+      "importantNotice": "Os horários estão sujeitos a alterações devido às condições climáticas. Verifique as atualizações antes da sua visita."
+    },
+    "lugares": {
+      "title": "Locais Disponíveis",
+      "cristoReyAlt": "Cristo Rei",
+      "cristoReyTitle": "Cristo Rei",
+      "cristoReyDescription": "O icônico monumento que vigia a cidade das colinas",
+      "details": "Ver Detalhes",
+      "comingSoonTitle": "Em Breve",
+      "comingSoonDescription": "Estamos trabalhando para adicionar mais locais emblemáticos"
+    },
+    "contactenos": {
+      "writeUs": "Escreva para Nós",
+      "fullName": "Nome Completo",
+      "fullNamePlaceholder": "Seu nome completo",
+      "email": "Email",
+      "emailPlaceholder": "seuemail@exemplo.com",
+      "message": "Sua Mensagem",
+      "messagePlaceholder": "Escreva sua mensagem aqui...",
+      "sending": "Enviando...",
+      "send": "Enviar Mensagem",
+      "success": "🎉 Mensagem enviada e salva!",
+      "error": "❌ Erro",
+      "directContact": "Contato Direto",
+      "mainOffice": "Escritório Principal",
+      "address": "Carrera 24 #52-01\nCali, Valle del Cauca",
+      "phone": "Telefone",
+      "phoneNumber": "+57 (602) 555-1234",
+      "emailTitle": "Email",
+      "emailAddress": "contact@calitravelguide.com",
+      "hours": "Horários",
+      "hoursText": "Seg-Sex: 8AM - 6PM\nSáb: 9AM - 1PM"
+    },
+    "fotografias": {
+      "title": "Fotografias",
+      "subtitle": "Explore momentos únicos capturados em imagens.",
+      "prev": "Anterior",
+      "next": "Próximo",
+      "congratulations": "Parabéns, você viu todas as fotografias!",
+      "imageAlt1": "Foto 1",
+      "imageAlt2": "Foto 2",
+      "imageAlt3": "Foto 3",
+      "imageAlt4": "Foto 4",
+      "imageAlt5": "Foto 5",
+      "imageAlt6": "Foto 6"
+    }
+  }
+  

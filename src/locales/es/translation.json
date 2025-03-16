@@ -1,0 +1,115 @@
+{
+    "navbar": {
+        "inicio": "INICIO",
+        "lugares": "LUGARES",
+        "contactenos": "CONTACTENOS",
+        "idioma": "IDIOMA"
+    },
+    "titulo": "CALI TRAVEL GUIDE",
+    "home": {
+        "recorrido": {
+            "title": "RECORRIDO",
+            "subtitle": "Explora"
+        },
+        "historia": {
+            "title": "HISTORIA",
+            "subtitle": "Conoce"
+        },
+        "fotografias": {
+            "title": "FOTOGRAFÍAS",
+            "subtitle": "Mira"
+        }
+    },
+    "footer": {
+        "visitUs": "Visítenos",
+        "addressLine1": "Monumento Cristo Rey",
+        "addressLine2": "Cali, Valle del Cauca",
+        "addressLine3": "Colombia",
+        "moreInfo": "Más información",
+        "usefulLinks": "Enlaces útiles",
+        "schedule": "Horarios",
+        "gallery": "Galería",
+        "contactUs": "Contactenos",
+        "socialMedia": "Redes Sociales",
+        "copyRight": "Cali Travel Guide © 2024",
+        "privacyPolicy": "Política de privacidad",
+        "termsConditions": "Términos y condiciones"
+    },
+    "historia": {
+        "title": "Cristo Rey",
+        "subtitle": "Descubre los orígenes y el legado de este icónico monumento.",
+        "historyHeading": "Un poco de historia",
+        "historyParagraph1": "El monumento de Cristo Rey es uno de los puntos turísticos más reconocidos en la región. Construido en 1953, este lugar ofrece una vista panorámica increíble de la ciudad de Cali.",
+        "historyParagraph2": "Diseñado como un símbolo de paz, el monumento mide 26 metros de altura y atrae a miles de visitantes cada año, quienes no solo admiran su arquitectura, sino también el entorno natural que lo rodea."
+    },
+    "horarios": {
+        "title": "Ecoparque Cristo Rey - Visita 2025",
+        "backLink": "← Volver a Lugares",
+        "scheduleTitle": "Horarios de Visita",
+        "reopenLabel": "Reapertura",
+        "reopenDate": "2 de Enero 2025",
+        "adminLabel": "Administración",
+        "adminName": "Dagma",
+        "entryLabel": "Entrada",
+        "entryInfo": "Gratuita con registro previo",
+        "firstShift": "Primer Turno",
+        "middayShift": "Turno Mediodía",
+        "afternoonShift": "Turno Tarde",
+        "note": "* Presentarse 15 minutos antes del turno asignado",
+        "requirementsTitle": "Requisitos Obligatorios",
+        "req1": "Registro previo en plataforma web",
+        "req2": "Documento de identidad original",
+        "req3": "Mascotas con collar y correa",
+        "registrationTitle": "Proceso de Registro",
+        "regStep1": "Visite el portal oficial:",
+        "regStep2": "Complete el formulario en:",
+        "regStep3": "Descargue su QR válido para hasta 4 personas",
+        "mapTitle": "Ubicación Exacta",
+        "mapButton": "Ver Ubicación Exacta",
+        "importantNotice": "Horarios sujetos a cambios por condiciones climáticas. Verifique actualizaciones antes de su visita."
+    },
+    "lugares": {
+        "title": "Lugares Disponibles",
+        "cristoReyAlt": "Cristo Rey",
+        "cristoReyTitle": "Cristo Rey",
+        "cristoReyDescription": "El icónico monumento que vigila la ciudad desde los cerros",
+        "details": "Ver Detalles",
+        "comingSoonTitle": "Próximamente",
+        "comingSoonDescription": "Estamos trabajando para agregar más lugares emblemáticos"
+    },
+    "contactenos": {
+        "writeUs": "Escríbenos",
+        "fullName": "Nombre completo",
+        "fullNamePlaceholder": "Tu nombre completo",
+        "email": "Correo electrónico",
+        "emailPlaceholder": "tucorreo@ejemplo.com",
+        "message": "Tu mensaje",
+        "messagePlaceholder": "Escribe tu mensaje aquí...",
+        "sending": "Enviando...",
+        "send": "Enviar Mensaje",
+        "success": "🎉 Mensaje enviado y guardado!",
+        "error": "❌ Error",
+        "directContact": "Contacto Directo",
+        "mainOffice": "Oficina Principal",
+        "address": "Carrera 24 #52-01\nCali, Valle del Cauca",
+        "phone": "Teléfono",
+        "phoneNumber": "+57 (602) 555-1234",
+        "emailTitle": "Correo Electrónico",
+        "emailAddress": "contacto@calitravelguide.com",
+        "hours": "Horarios",
+        "hoursText": "Lun-Vie: 8AM - 6PM\nSáb: 9AM - 1PM"
+    },
+    "fotografias": {
+        "title": "Fotografías",
+        "subtitle": "Explora momentos únicos capturados en imágenes.",
+        "prev": "Anterior",
+        "next": "Siguiente",
+        "congratulations": "¡Felicidades, viste todas las Fotografias!",
+        "imageAlt1": "Foto 1",
+        "imageAlt2": "Foto 2",
+        "imageAlt3": "Foto 3",
+        "imageAlt4": "Foto 4",
+        "imageAlt5": "Foto 5",
+        "imageAlt6": "Foto 6"
+    }
+}
