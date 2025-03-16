@@ -13,9 +13,9 @@ const Footer = () => {
                 <div className="footerColumn">
                     <h3>{t('footer.visitUs')}</h3>
                     <p>
-                      {t('footer.addressLine1')}<br />
-                      {t('footer.addressLine2')}<br />
-                      {t('footer.addressLine3')}
+                        {t('footer.addressLine1')}<br />
+                        {t('footer.addressLine2')}<br />
+                        {t('footer.addressLine3')}
                     </p>
                     <button className="footerButton">{t('footer.moreInfo')}</button>
                 </div>
@@ -36,24 +36,24 @@ const Footer = () => {
                     <div className="footerSocials">
                         <ul>
                             <li>
-                              <a href="https://www.instagram.com">
-                                <i className="fab fa-instagram">Instagram</i>
-                              </a>
+                                <a href="https://www.instagram.com">
+                                    <i className="fab fa-instagram">Instagram</i>
+                                </a>
                             </li>
                             <li>
-                              <a href="https://www.facebook.com">
-                                <i className="fab fa-facebook">Facebook</i>
-                              </a>
+                                <a href="https://www.facebook.com">
+                                    <i className="fab fa-facebook">Facebook</i>
+                                </a>
                             </li>
                             <li>
-                              <a href="https://x.com">
-                                <i className="fab fa-twitter">X</i>
-                              </a>
+                                <a href="https://x.com">
+                                    <i className="fab fa-twitter">X</i>
+                                </a>
                             </li>
                             <li>
-                              <a href="https://www.youtube.com">
-                                <i className="fab fa-youtube">Youtube</i>
-                              </a>
+                                <a href="https://www.youtube.com">
+                                    <i className="fab fa-youtube">Youtube</i>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -64,10 +64,10 @@ const Footer = () => {
             <div className="footerBottom">
                 <p>{t('footer.copyRight')}</p>
                 <a href="https://www.google.com/search?client=opera&q=terminos+y+condiciones&sourceid=opera&ie=UTF-8&oe=UTF-8">
-                  {t('footer.privacyPolicy')}
+                    {t('footer.privacyPolicy')}
                 </a> |
                 <a href="https://www.google.com/search?client=opera&q=terminos+y+condiciones&sourceid=opera&ie=UTF-8&oe=UTF-8">
-                  {t('footer.termsConditions')}
+                    {t('footer.termsConditions')}
                 </a>
             </div>
         </footer>
