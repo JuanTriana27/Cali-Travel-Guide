@@ -1,5 +1,5 @@
-import React from 'react';
-import '../../pages/Fotografias/fotografias.css'; 
+import React, { useState, useEffect } from 'react';
+import '../../pages/Fotografias/fotografias.css';
 
 // Importa las imágenes
 import image1 from '../../assets/imagenes/Image1.jpg';
@@ -20,6 +20,31 @@ const Fotografias = () => {
         { src: image6, alt: 'Foto 6' },
     ];
 
+    // Estado para controlar la imagen actual
+    const [currentIndex, setCurrentIndex] = useState(0);
+    // Estado para llevar registro de los índices ya visitados
+    const [visited, setVisited] = useState(new Set([0]));
+
+    // Cada vez que cambia la imagen actual, se agrega el índice a "visited"
+    useEffect(() => {
+        setVisited((prevVisited) => new Set(prevVisited).add(currentIndex));
+    }, [currentIndex]);
+
+    // Función para pasar a la siguiente imagen
+    const nextImage = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    };
+
+    // Función para volver a la imagen anterior
+    const previousImage = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    };
+
+    // Calcula el progreso en porcentaje
+    const progress = (visited.size / images.length) * 100;
+    // Comprueba si se han visto todas las imágenes
+    const allVisited = visited.size === images.length;
+
     return (
         <div className="fotografias">
             <header className="fotografiasHeader">
@@ -29,16 +54,33 @@ const Fotografias = () => {
                 </p>
             </header>
 
-            <section className="galeria">
-                {images.map((image, index) => (
-                    <div key={index} className="galeriaItem">
-                        <img
-                            src={image.src}
-                            alt={image.alt}
-                            className="galeriaImage"
-                        />
+            <section className="slider">
+                <div className="sliderItem">
+                    <img
+                        src={images[currentIndex].src}
+                        alt={images[currentIndex].alt}
+                        className="sliderImage"
+                    />
+                </div>
+                <div className="sliderButtons">
+                    <button className="prevButton" onClick={previousImage}>Anterior</button>
+                    <button className="nextButton" onClick={nextImage}>Siguiente</button>
+                </div>
+
+                {/* Barra de progreso */}
+                <div className="progressContainer">
+                    <div className="progressBar" style={{ textAlign: 'center',  width: `${progress}%` }}>
+                        <span className="progressText">{Math.round(progress)}%</span>
                     </div>
-                ))}
+                </div>
+
+
+                {/* Mensaje de felicitación */}
+                {allVisited && (
+                    <div className="congratulations">
+                        ¡Felicidades, viste todas las imágenes!
+                    </div>
+                )}
             </section>
         </div>
     );

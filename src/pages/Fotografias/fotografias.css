@@ -17,14 +17,12 @@
     animation: slideDown 1.2s ease-in-out;
 }
 
-/* Titulo Principal */
 .fotografiasTitle {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
     animation: fadeInTitle 1.5s ease forwards;
 }
 
-/* Subtitulo */
 .fotografiasSubtitle {
     font-size: 1.2rem;
     font-weight: 300;
@@ -32,38 +30,86 @@
     animation: fadeInSubtitle 2s ease forwards;
 }
 
-/* Galería */
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    padding: 3rem;
-    animation: fadeIn 1.5s ease-in-out;
+/* Slider */
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
 }
 
-.galeriaItem {
-    position: relative;
-    overflow: hidden;
+.sliderItem {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 1rem;
+}
+
+.sliderImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.galeriaItem:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-}
-
-.galeriaImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.galeriaImage:hover {
-    transform: scale(1.1);
-    filter: brightness(0.9);
+/* Botones del slider */
+.sliderButtons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.prevButton,
+.nextButton {
+    background-color: #A60321;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.prevButton:hover,
+.nextButton:hover {
+    background-color: #8a0320;
+}
+
+/* Barra de progreso */
+.progressContainer {
+    width: 100%;
+    max-width: 600px;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin-top: 1rem;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    /* Borde temporal para depuración */
+}
+
+.progressBar {
+    height: 100%;
+    background-color: #A60321;
+    transition: width 0.5s ease;
+    min-width: 10px;
+    /* Asegura visibilidad mínima */
+}
+
+.progressText {
+    color: white;
+    font-size: 0.85rem;
+    left: 50%;
+}
+
+/* Mensaje de felicitación */
+.congratulations {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #A60321;
+    text-align: center;
 }
 
 /* Animaciones */
@@ -115,7 +161,7 @@
 
 /* Responsivo */
 @media (max-width: 768px) {
-    .galeria {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    .sliderItem {
+        max-width: 100%;
     }
 }
