@@ -6,24 +6,76 @@ import image4 from '../../assets/imagenes/Image4.jpg';
 
 const videoConfig = {
   en: [
-    { id: 1, url: 'https://youtu.be/EN_VIDEO_1', titleKey: 'historia.titleVideo1' },
-    { id: 2, url: 'https://youtu.be/EN_VIDEO_2', titleKey: 'historia.titleVideo2' },
-    { id: 3, url: 'https://youtu.be/EN_VIDEO_3', titleKey: 'historia.titleVideo3' }
+    {
+      id: 1,
+      url: '../src/assets//videos/Video1_En.mp4',
+      titleKey: 'historia.titleVideo1',
+      isLocal: true
+    },
+    {
+      id: 2,
+      url: 'https://youtu.be/EN_VIDEO_2',
+      titleKey: 'historia.titleVideo2'
+    },
+    {
+      id: 3,
+      url: 'https://youtu.be/EN_VIDEO_3',
+      titleKey: 'historia.titleVideo3'
+    }
   ],
   es: [
-    { id: 1, url: 'https://youtu.be/quexwWHsVUQ', titleKey: 'historia.titleVideo1' },
-    { id: 2, url: 'https://youtu.be/ES_VIDEO_2', titleKey: 'historia.titleVideo2' },
-    { id: 3, url: 'https://youtu.be/ES_VIDEO_3', titleKey: 'historia.titleVideo3' }
+    {
+      id: 1,
+      url: '/videos/Video1_Es.mp4',
+      titleKey: 'historia.titleVideo1',
+      isLocal: true
+    },
+    {
+      id: 2,
+      url: 'https://youtu.be/ES_VIDEO_2',
+      titleKey: 'historia.titleVideo2'
+    },
+    {
+      id: 3,
+      url: 'https://youtu.be/ES_VIDEO_3',
+      titleKey: 'historia.titleVideo3'
+    }
   ],
   fr: [
-    { id: 1, url: 'https://youtu.be/FR_VIDEO_1', titleKey: 'historia.titleVideo1' },
-    { id: 2, url: 'https://youtu.be/FR_VIDEO_2', titleKey: 'historia.titleVideo2' },
-    { id: 3, url: 'https://youtu.be/FR_VIDEO_3', titleKey: 'historia.titleVideo3' }
+    {
+      id: 1,
+      url: '/videos/Video1_Fr.mp4',
+      titleKey: 'historia.titleVideo1',
+      isLocal: true
+    },
+    {
+      id: 2,
+      url: 'https://youtu.be/FR_VIDEO_2',
+      titleKey: 'historia.titleVideo2'
+    },
+    {
+      id: 3,
+      url: 'https://youtu.be/FR_VIDEO_3',
+      titleKey: 'historia.titleVideo3'
+    }
   ],
   pt: [
-    { id: 1, url: 'https://youtu.be/PT_VIDEO_1', titleKey: 'historia.titleVideo1' },
-    { id: 2, url: 'https://youtu.be/PT_VIDEO_2', titleKey: 'historia.titleVideo2' },
-    { id: 3, url: 'https://youtu.be/PT_VIDEO_3', titleKey: 'historia.titleVideo3' }
+    {
+      id: 1,
+      url: '/videos/Video1_Pt.mp4',
+      titleKey: 'historia.titleVideo1',
+      isLocal: true
+    },
+    {
+      id: 2,
+      url: 'https://youtu.be/PT_VIDEO_2',
+      titleKey: 'historia.titleVideo2'
+    },
+    {
+      id: 3,
+      url: 'https://youtu.be/PT_VIDEO_3',
+      titleKey: 'historia.titleVideo3'
+    }
   ]
 };
 
@@ -31,13 +83,67 @@ const Historia = () => {
   const { t, i18n } = useTranslation();
   const [selectedVideo, setSelectedVideo] = useState(null);
 
-  const getVideoId = (url) => {
-    const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([^&?]+)/);
-    return match ? match[1] : null;
-  };
+  const getVideoContent = (video) => {
+    if (selectedVideo?.id === video.id) {
+      return (
+        <div className="inlineVideoPlayer">
+          <ReactPlayer
+            url={video.isLocal ? `${process.env.PUBLIC_URL}${video.url}` : video.url}
+            controls
+            playing
+            width="100%"
+            height="100%"
+            className="react-player"
+            config={{
+              file: {
+                attributes: {
+                  controlsList: 'nodownload'
+                }
+              }
+            }}
+          />
+          <button 
+            className="closeInlineButton" 
+            onClick={(e) => {
+              e.stopPropagation();
+              setSelectedVideo(null);
+            }}
+          >
+            &times;
+          </button>
+        </div>
+      );
+    }
+    
+    const getThumbnail = () => {
+      if (video.isLocal) {
+        return (
+          <div className="localVideoThumbnail">
+            <div className="videoOverlay">
+              <span className="playIcon">&#9658;</span>
+            </div>
+          </div>
+        );
+      }
+      
+      const videoId = video.url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([^&?]+)/)?.[1];
+      return videoId && (
+        <img
+          src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+          alt={t(video.titleKey)}
+          className="thumbnailImage"
+        />
+      );
+    };
 
-  const handleVideoClick = (video) => {
-    setSelectedVideo(video);
+    return (
+      <>
+        {getThumbnail()}
+        <div className="videoOverlay">
+          <span className="playIcon">&#9658;</span>
+        </div>
+      </>
+    );
   };
 
   const currentLanguage = i18n.language.split('-')[0];
@@ -69,53 +175,19 @@ const Historia = () => {
       <section className="videoSection">
         <h2>{t('historia.videoGallery')}</h2>
         <div className="videoGrid">
-          {videos.map((video) => {
-            const videoId = getVideoId(video.url);
-            return (
-              <div
-                key={video.id}
-                className="videoThumbnail"
-                onClick={() => handleVideoClick(video)}
-              >
-                <div className="videoThumbnailWrapper">
-                  {videoId && (
-                    <img
-                      src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
-                      alt={t(video.titleKey)}
-                      className="thumbnailImage"
-                    />
-                  )}
-                  <div className="videoOverlay">
-                    <span className="playIcon">&#9658;</span>
-                  </div>
-                </div>
-                <p className="videoTitle">{t(video.titleKey)}</p>
+          {videos.map((video) => (
+            <div
+              key={video.id}
+              className={`videoThumbnail ${selectedVideo?.id === video.id ? 'active' : ''}`}
+              onClick={() => setSelectedVideo(selectedVideo?.id === video.id ? null : video)}
+            >
+              <div className="videoThumbnailWrapper">
+                {getVideoContent(video)}
               </div>
-            );
-          })}
-        </div>
-
-        {selectedVideo && (
-          <div className="videoPlayerModal">
-            <div className="videoPlayerContent">
-              <button
-                className="closeButton"
-                onClick={() => setSelectedVideo(null)}
-              >
-                &times;
-              </button>
-              <div className="videoPlayerAspectRatio">
-                <ReactPlayer
-                  className="react-player"
-                  url={selectedVideo.url}
-                  controls
-                  width="100%"
-                  height="100%"
-                />
-              </div>
+              <p className="videoTitle">{t(video.titleKey)}</p>
             </div>
-          </div>
-        )}
+          ))}
+        </div>
       </section>
     </div>
   );
