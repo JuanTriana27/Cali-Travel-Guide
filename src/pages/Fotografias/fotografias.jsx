@@ -60,10 +60,10 @@ const Fotografias = () => {
                 </div>
                 <div className="sliderButtons">
                     <button className="prevButton" onClick={previousImage}>
-                      {t('fotografias.prev')}
+                        {t('fotografias.prev')}
                     </button>
                     <button className="nextButton" onClick={nextImage}>
-                      {t('fotografias.next')}
+                        {t('fotografias.next')}
                     </button>
                 </div>
 
