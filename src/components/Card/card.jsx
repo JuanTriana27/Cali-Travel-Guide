@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'; // Link para navegación
 import '../Card/card.css'; // Importamos el archivo de estilos
 
 // Importamos las imágenes que se mostrarán en las tarjetas
-import recorrido from '../../assets/imagenes/Recorrido.jpg';
-import fotografias from '../../assets/imagenes/Historia.jpg';
-import cristoRey from '../../assets/imagenes/Fotografia.jpg';
+import recorrido from '../../assets/imagenes/Recorrido.JPG';
+import fotografias from '../../assets/imagenes/Historia.JPG';
+import cristoRey from '../../assets/imagenes/Fotografia.JPG';
 
 // Creamos el componente Card
 // Se agrega la prop "imageKey" para identificar la imagen de forma fija
