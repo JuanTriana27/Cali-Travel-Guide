@@ -32,12 +32,12 @@ const videoConfig = {
     },
     {
       id: 2,
-      url: 'https://youtu.be/ES_VIDEO_2',
+      url: '/videos/Video2_Es.mp4',
       titleKey: 'historia.titleVideo2'
     },
     {
       id: 3,
-      url: 'https://youtu.be/ES_VIDEO_3',
+      url: '/videos/Video3_Es.mp4',
       titleKey: 'historia.titleVideo3'
     }
   ],
