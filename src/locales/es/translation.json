@@ -109,13 +109,6 @@
         "prev": "Anterior",
         "next": "Siguiente",
         "congratulations": "¡Felicidades, has visto todas las fotografías!",
-        "modalMessage": "¡Gracias por explorar nuestra galería de fotos!",
-        "imageAlt1": "Foto 1",
-        "imageAlt2": "Foto 2",
-        "imageAlt3": "Foto 3",
-        "imageAlt4": "Foto 4",
-        "imageAlt5": "Foto 5",
-        "imageAlt6": "Foto 6",
-        "imageAlt7": "Foto 7"
+        "modalMessage": "¡Gracias por explorar nuestra galería de fotos!"
     }
 }
