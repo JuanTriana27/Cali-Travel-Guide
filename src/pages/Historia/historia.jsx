@@ -8,7 +8,7 @@ const videoConfig = {
   en: [
     {
       id: 1,
-      url: '../src/assets//videos/Video1_En.mp4',
+      url: '/videos/Video1.mp4',
       titleKey: 'historia.titleVideo1',
       isLocal: true
     },

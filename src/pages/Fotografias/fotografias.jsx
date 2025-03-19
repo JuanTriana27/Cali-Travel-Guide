@@ -2,85 +2,85 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../../pages/Fotografias/fotografias.css';
 
-// Importa las imágenes
-import image1 from '../../assets/imagenes/Image1.jpg';
-import image2 from '../../assets/imagenes/Image2.jpg';
-import image3 from '../../assets/imagenes/Image3.jpg';
-import image4 from '../../assets/imagenes/Image4.jpg';
-import image5 from '../../assets/imagenes/Image5.jpg';
-import image6 from '../../assets/imagenes/Image6.jpg';
-
 const Fotografias = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [showModal, setShowModal] = useState(false);
 
-    // Array de imágenes con traducciones para los alt
-    const images = [
-        { src: image1, alt: t('fotografias.imageAlt1') },
-        { src: image2, alt: t('fotografias.imageAlt2') },
-        { src: image3, alt: t('fotografias.imageAlt3') },
-        { src: image4, alt: t('fotografias.imageAlt4') },
-        { src: image5, alt: t('fotografias.imageAlt5') },
-        { src: image6, alt: t('fotografias.imageAlt6') },
-    ];
+  // Función para importar todas las imágenes de la carpeta
+  const importAll = (r) =>
+    r.keys().map((key) => ({
+      src: r(key),
+      // Se extrae el nombre del archivo para poder ordenar o usar en el alt si lo deseas
+      name: key.replace('./', '')
+    }));
 
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [visited, setVisited] = useState(new Set([0]));
+  // Importa todas las imágenes de la carpeta '../../assets/imagenes'
+  const imagesImported = importAll(
+    require.context('../../assets/imagenes', false, /\.(png|jpe?g|JPG)$/)
+  );
 
-    useEffect(() => {
-        setVisited((prevVisited) => new Set(prevVisited).add(currentIndex));
-    }, [currentIndex]);
+  // Ordena las imágenes según el nombre (ajusta la función de comparación si requieres otro orden)
+  const images = imagesImported.sort((a, b) => a.name.localeCompare(b.name));
 
-    const nextImage = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    };
+  useEffect(() => {
+    // Muestra el modal cuando se llega a la última imagen
+    if (currentIndex === images.length - 1) {
+      setShowModal(true);
+    }
+  }, [currentIndex, images.length]);
 
-    const previousImage = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-    };
+  const nextImage = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
 
-    const progress = (visited.size / images.length) * 100;
-    const allVisited = visited.size === images.length;
+  const previousImage = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
 
-    return (
-        <div className="fotografias">
-            <header className="fotografiasHeader">
-                <h1 className="fotografiasTitle">{t('fotografias.title')}</h1>
-                <p className="fotografiasSubtitle">
-                    {t('fotografias.subtitle')}
-                </p>
-            </header>
+  const closeModal = () => {
+    setShowModal(false);
+  };
 
-            <section className="slider">
-                <div className="sliderItem">
-                    <img
-                        src={images[currentIndex].src}
-                        alt={images[currentIndex].alt}
-                        className="sliderImage"
-                    />
-                </div>
-                <div className="sliderButtons">
-                    <button className="prevButton" onClick={previousImage}>
-                        {t('fotografias.prev')}
-                    </button>
-                    <button className="nextButton" onClick={nextImage}>
-                        {t('fotografias.next')}
-                    </button>
-                </div>
+  return (
+    <div className="fotografias">
+      <header className="fotografiasHeader">
+        <h1 className="fotografiasTitle">{t('fotografias.title')}</h1>
+        <p className="fotografiasSubtitle">{t('fotografias.subtitle')}</p>
+      </header>
 
-                <div className="progressContainer">
-                    <div className="progressBar" style={{ textAlign: 'center', width: `${progress}%` }}>
-                        <span className="progressText">{Math.round(progress)}%</span>
-                    </div>
-                </div>
-
-                {allVisited && (
-                    <div className="congratulations">
-                        {t('fotografias.congratulations')}
-                    </div>
-                )}
-            </section>
+      <section className="slider">
+        <div className="sliderItem">
+          <img
+            src={images[currentIndex].src}
+            alt={t(`fotografias.imageAlt${currentIndex + 1}`)}
+            className="sliderImage"
+          />
         </div>
-    );
+        <div className="sliderButtons">
+          <button className="prevButton" onClick={previousImage}>
+            {t('fotografias.prev')}
+          </button>
+          <button className="nextButton" onClick={nextImage}>
+            {t('fotografias.next')}
+          </button>
+        </div>
+      </section>
+
+      {/* Modal */}
+      {showModal && (
+        <div className="modalOverlay">
+          <div className="modalContent">
+            <h2>{t('fotografias.congratulations')}</h2>
+            <p>{t('fotografias.modalMessage')}</p>
+            <button className="closeButton" onClick={closeModal}>
+              OK
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Fotografias;
