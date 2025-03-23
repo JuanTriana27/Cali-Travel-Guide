@@ -1,70 +1,153 @@
-.recorrido-container {
+.contenedor-escena {
+    position: relative;
     width: 100%;
     height: 100vh;
+    overflow: hidden;
+}
+
+.visor-3d {
+    width: 100%;
+    height: 100%;
+}
+
+/* Menú lateral para escritorio */
+.menu-escena {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: -2px 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px 0 0 15px;
+    transition: 0.3s;
+    z-index: 1000;
     display: flex;
     flex-direction: column;
 }
 
-.visor-recorrido {
-    flex: 1;
-    position: relative;
-    min-height: 90vh;
-}
-
-/* Estilos específicos para el embed de Sketchfab */
-.sketchfab-embed-wrapper {
-    width: 100%;
-    height: 89vh;
-    position: relative;
-}
-
-.sketchfab-embed-wrapper iframe {
-    width: 100%;
-    height: 100%;
+/* Botón de toggle para ocultar/mostrar menú */
+.toggle-menu {
+    background: none;
     border: none;
+    padding: 15px;
+    cursor: pointer;
+    color: #333;
+    transition: 0.3s;
+    align-self: flex-start;
 }
 
-.attribution-text {
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    color: #4A4A4A;
-    background: #f8f9fa;
+.toggle-menu:hover {
+    color: #2196F3;
 }
 
-.attribution-link {
-    color: #1CAAD9;
-    text-decoration: none;
-    font-weight: bold;
+/* Contenedor de opciones dentro del menú */
+.opciones-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    min-width: 200px;
 }
 
-.attribution-link:hover {
-    text-decoration: underline;
+/* Estilo de los botones del menú */
+.boton-luz,
+.boton-figura,
+.boton-movimiento {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #eee;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    color: #333;
 }
 
-/* Animaciones solo si se mantiene loader */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
+.boton-luz:hover,
+.boton-figura:hover,
+.boton-movimiento:hover {
+    transform: translateX(-5px);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Media queries para responsividad */
+.boton-luz.activo,
+.boton-movimiento.activo {
+    background: #2196F3;
+    color: white;
+    border-color: #1976D2;
+}
+
+.boton-luz.activo svg,
+.boton-movimiento.activo svg {
+    color: white;
+}
+
+.boton-figura {
+    background: #4CAF50;
+    color: white;
+    border-color: #45a049;
+}
+
+/* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
-    .visor-recorrido {
-        min-height: 70vh;
+    .menu-escena {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+        transform: none;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px 0;
     }
 
-    .attribution-text {
-        font-size: 0.8rem;
-        padding: 0.5rem;
+    /* Se puede ocultar el texto de los botones para mayor espacio */
+    .boton-luz span,
+    .boton-figura span,
+    .boton-movimiento span {
+        display: none;
+    }
+
+    /* Opciones en fila y ajustadas */
+    .opciones-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Ajuste de márgenes en botones para que se acomoden en el menú horizontal */
+    .boton-luz,
+    .boton-figura,
+    .boton-movimiento {
+        margin: 0 5px;
+        padding: 10px;
+        min-width: auto;
+        flex: 1;
+        justify-content: center;
+    }
+
+    /* Opcional: mostrar un botón de toggle para expandir/contraer el menú si se requiere */
+    .toggle-menu {
+        display: block;
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0.95);
+        border: 1px solid #eee;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     }
 }
