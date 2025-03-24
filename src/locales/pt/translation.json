@@ -116,16 +116,48 @@
     "title": "Fauna",
     "subtitle": "Descubra os animais",
     "animal1": {
-      "name": "Leão",
-      "info": "O leão é conhecido como o rei da selva."
+      "name": "Macaco-esquilo",
+      "info": "O macaco-esquilo é um primata ágil e curioso que vive no topo das árvores."
     },
     "animal2": {
-      "name": "Elefante",
-      "info": "Os elefantes são os maiores animais terrestres da Terra."
+      "name": "Garrapatero de bico liso",
+      "info": "O garrapatero de bico liso destaca-se pelo seu bico fino, ideal para capturar insetos."
     },
     "animal3": {
-      "name": "Girafa",
-      "info": "As girafas são famosas por seus pescoços longos."
+      "name": "Morcego de língua longa",
+      "info": "O morcego de língua longa utiliza sua língua alongada para se alimentar de néctar e frutas."
+    },
+    "animal4": {
+      "name": "Olinguito",
+      "info": "O olinguito é um pequeno mamífero noturno, parente dos guaxinins, que vive em florestas tropicais."
+    },
+    "animal5": {
+      "name": "Beija-flor mascarado",
+      "info": "O beija-flor mascarado é um pássaro minúsculo com um bico especializado para sugar néctar."
+    },
+    "animal6": {
+      "name": "Sicalis canário açafrão",
+      "info": "O sicalis canário açafrão é um pássaro colorido conhecido pelo seu canto e plumagem vibrante."
+    },
+    "animal7": {
+      "name": "Tarântula",
+      "info": "A tarântula é uma aranha de grande porte, conhecida por sua aparência peluda e movimento lento."
+    },
+    "animal8": {
+      "name": "Tayra",
+      "info": "A tayra é um mamífero ágil e astuto, parente da doninha, que habita em florestas tropicais."
+    },
+    "animal9": {
+      "name": "Torito cabecirrojo",
+      "info": "O torito cabecirrojo é um pássaro com traços distintivos na cabeça, facilitando sua identificação na natureza."
+    },
+    "animal10": {
+      "name": "Tororoi voador",
+      "info": "O tororoi voador é uma espécie de ave ágil e elegante, conhecida por sua habilidade de voo."
+    },
+    "animal11": {
+      "name": "Trogon collarejo",
+      "info": "O trogon collarejo é uma ave tropical com uma plumagem marcante e um colar característico de cores."
     }
   }
 }

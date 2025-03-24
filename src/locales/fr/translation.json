@@ -116,16 +116,48 @@
         "title": "Faune",
         "subtitle": "Découvrez les animaux",
         "animal1": {
-            "name": "Lion",
-            "info": "Le lion est connu comme le roi de la jungle."
+            "name": "Singe écureuil",
+            "info": "Le singe écureuil est un primate agile et curieux qui vit dans la canopée des arbres."
         },
         "animal2": {
-            "name": "Éléphant",
-            "info": "Les éléphants sont les plus grands animaux terrestres sur Terre."
+            "name": "Garrapatero à bec lisse",
+            "info": "Le garrapatero à bec lisse se distingue par son bec fin, idéal pour capturer des insectes."
         },
         "animal3": {
-            "name": "Girafe",
-            "info": "Les girafes sont célèbres pour leur long cou."
+            "name": "Chauve-souris à longue langue",
+            "info": "La chauve-souris à longue langue utilise sa langue allongée pour se nourrir de nectar et de fruits."
+        },
+        "animal4": {
+            "name": "Olinguito",
+            "info": "L'olinguito est un petit mammifère nocturne, apparenté aux ratons laveurs, qui vit dans les forêts tropicales."
+        },
+        "animal5": {
+            "name": "Colibri masqué",
+            "info": "Le colibri masqué est un oiseau minuscule doté d'un bec spécialisé pour sucer le nectar."
+        },
+        "animal6": {
+            "name": "Sicalis canari safrané",
+            "info": "Le sicalis canari safrané est un oiseau coloré connu pour son chant et son plumage vibrant."
+        },
+        "animal7": {
+            "name": "Tarentule",
+            "info": "La tarentule est une grande araignée, reconnue pour son apparence velue et sa démarche lente."
+        },
+        "animal8": {
+            "name": "Tayra",
+            "info": "La tayra est un mammifère agile et rusé, apparenté à la belette, qui vit dans les forêts tropicales."
+        },
+        "animal9": {
+            "name": "Torito à tête rouge",
+            "info": "Le torito à tête rouge est un oiseau aux traits distinctifs sur la tête, ce qui le rend facile à identifier dans la nature."
+        },
+        "animal10": {
+            "name": "Tororoi volant",
+            "info": "Le tororoi volant est une espèce d'oiseau agile et élégant, reconnue pour sa capacité de vol."
+        },
+        "animal11": {
+            "name": "Trogon collarejo",
+            "info": "Le trogon collarejo est un oiseau tropical avec un plumage saisissant et un collier de couleurs caractéristiques."
         }
     }
 }

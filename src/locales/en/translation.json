@@ -116,16 +116,48 @@
         "title": "Fauna",
         "subtitle": "Discover the animals",
         "animal1": {
-            "name": "Lion",
-            "info": "The lion is known as the king of the jungle."
+            "name": "Squirrel Monkey",
+            "info": "The squirrel monkey is an agile and curious primate that lives in the treetops."
         },
         "animal2": {
-            "name": "Elephant",
-            "info": "Elephants are the largest land animals on Earth."
+            "name": "Smooth-beaked Garrapatero",
+            "info": "The smooth-beaked Garrapatero stands out for its fine beak, ideal for capturing insects."
         },
         "animal3": {
-            "name": "Giraffe",
-            "info": "Giraffes are famous for their long necks."
+            "name": "Long-tongued Bat",
+            "info": "The long-tongued bat uses its elongated tongue to feed on nectar and fruits."
+        },
+        "animal4": {
+            "name": "Olinguito",
+            "info": "The olinguito is a small nocturnal mammal, a relative of raccoons, that lives in tropical forests."
+        },
+        "animal5": {
+            "name": "Masked Hummingbird",
+            "info": "The masked hummingbird is a tiny bird with a specialized beak for sucking nectar."
+        },
+        "animal6": {
+            "name": "Saffron Canary Sicalis",
+            "info": "The saffron canary Sicalis is a colorful bird known for its song and vibrant plumage."
+        },
+        "animal7": {
+            "name": "Tarantula",
+            "info": "The tarantula is a large spider known for its hairy appearance and slow movement."
+        },
+        "animal8": {
+            "name": "Tayra",
+            "info": "The tayra is an agile and cunning mammal, a relative of the weasel, that lives in tropical forests."
+        },
+        "animal9": {
+            "name": "Red-headed Torito",
+            "info": "The red-headed torito is a bird with distinctive features on its head, making it easily identifiable in nature."
+        },
+        "animal10": {
+            "name": "Flying Tororoi",
+            "info": "The flying tororoi is an agile and elegant bird, renowned for its flying ability."
+        },
+        "animal11": {
+            "name": "Collared Trogon",
+            "info": "The collared trogon is a tropical bird with striking plumage and a characteristic colorful collar."
         }
     }
 }

@@ -1,4 +1,10 @@
+require('dotenv').config(); // Carga las variables definidas en el archivo .env
+
 const { MongoClient, ObjectId } = require('mongodb');
+const nodemailer = require('nodemailer');
+
+// Función para introducir un retraso
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 exports.handler = async (event) => {
   const client = new MongoClient(process.env.MONGODB_URI);
@@ -21,13 +27,51 @@ exports.handler = async (event) => {
       };
     }
 
-    // Manejo para GET: Listar todos los contactos
+    // Manejo para GET: Enviar correos uno a uno y devolver los contactos
     else if (event.httpMethod === 'GET') {
       const contacts = await contactsCollection.find({}).toArray();
+
+      if (contacts.length === 0) {
+        return {
+          statusCode: 404,
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ error: 'No hay contactos disponibles' }, null, 2)
+        };
+      }
+
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_PASS
+        }
+      });
+
+      // Enviar correos de forma secuencial a todos los contactos que tengan email
+      for (const contact of contacts) {
+        if (contact.email) {
+          await transporter.sendMail({
+            from: process.env.EMAIL_USER,
+            to: contact.email,
+            subject: 'Notificación de Contacto',
+            text: `Hola ${contact.name || 'usuario'}, este es un mensaje automático de prueba.`
+          });
+          await delay(1000);
+        }
+      }
+
+      // Devolver la lista de contactos junto con un mensaje de confirmación
       return {
         statusCode: 200,
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(contacts, null, 2)
+        body: JSON.stringify(
+          {
+            message: 'Correos Enviados',
+            contacts: contacts
+          },
+          null,
+          2
+        )
       };
     }
 

@@ -54,7 +54,7 @@
 
 .faunaCardWrapper {
     position: relative;
-    aspect-ratio: 16/9;
+    aspect-ratio: 1.2;
     background: #000;
 }
 
@@ -126,6 +126,23 @@
     color: #A60321;
     transition: all 0.3s ease;
 }
+
+.playAudioButton {
+    background-color: #A60321;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.playAudioButton:hover {
+    background-color: #b32a43;
+}
+
 
 .closeInfoButton:hover {
     background: #fff;

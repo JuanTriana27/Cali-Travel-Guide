@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import AudioPlayer from '../../components/AudioPlayer/audio';
 import '../../pages/Fauna/fauna.css';
 
 const faunaData = [
@@ -7,32 +8,92 @@ const faunaData = [
         id: 1,
         nameKey: 'fauna.animal1.name',
         infoKey: 'fauna.animal1.info',
-        image: '/assets/animales/animal1.jpg',
-        sound: '/assets/sounds/animal1.mp3'
+        image: '/fauna/mono ardilla.jpg',
+        sound: '/audio/mono.mp3'
     },
     {
         id: 2,
         nameKey: 'fauna.animal2.name',
         infoKey: 'fauna.animal2.info',
-        image: '/assets/animales/animal2.jpg',
-        sound: '/assets/sounds/animal2.mp3'
+        image: '/fauna/garrapatero pico liso.jpeg',
+        sound: '/audio/garrapatero.mp3'
     },
     {
         id: 3,
         nameKey: 'fauna.animal3.name',
         infoKey: 'fauna.animal3.info',
-        image: '/assets/animales/animal3.jpg',
-        sound: '/assets/sounds/animal3.mp3'
+        image: '/fauna/murcielago de lengua larga.jpg',
+        sound: '/audio/murcielago.mp3'
+    },
+    {
+        id: 4,
+        nameKey: 'fauna.animal4.name',
+        infoKey: 'fauna.animal4.info',
+        image: '/fauna/olinguito.jpg'
+    },
+    {
+        id: 5,
+        nameKey: 'fauna.animal5.name',
+        infoKey: 'fauna.animal5.info',
+        image: '/fauna/pinchaflor enmascarado.jpeg',
+        sound: '/audio/pinchaflor.mp3'
+    },
+    {
+        id: 6,
+        nameKey: 'fauna.animal6.name',
+        infoKey: 'fauna.animal6.info',
+        image: '/fauna/sicalis canario azafranado.jpeg',
+        sound: '/audio/sicalis.mp3'
+    },
+    {
+        id: 7,
+        nameKey: 'fauna.animal7.name',
+        infoKey: 'fauna.animal7.info',
+        image: '/fauna/tarantula.png'
+    },
+    {
+        id: 8,
+        nameKey: 'fauna.animal8.name',
+        infoKey: 'fauna.animal8.info',
+        image: '/fauna/tayra.jpg'
+    },
+    {
+        id: 9,
+        nameKey: 'fauna.animal9.name',
+        infoKey: 'fauna.animal9.info',
+        image: '/fauna/torito cabecirrojo.jpg',
+        sound: '/audio/torito.mp3'
+    },
+    {
+        id: 10,
+        nameKey: 'fauna.animal10.name',
+        infoKey: 'fauna.animal10.info',
+        image: '/fauna/tororoi volador.jpg',
+        sound: '/audio/tororoi.mp3'
+    },
+    {
+        id: 11,
+        nameKey: 'fauna.animal11.name',
+        infoKey: 'fauna.animal11.info',
+        image: '/fauna/trogon collarejo.jpeg',
+        sound: '/audio/trogon.mp3'
     }
 ];
 
 const Fauna = () => {
     const { t } = useTranslation();
     const [selectedAnimal, setSelectedAnimal] = useState(null);
+    // Guarda las referencias de cada AudioPlayer (clave: id del animal)
+    const audioRefs = useRef({});
 
-    const playSound = (soundUrl) => {
-        const audio = new Audio(soundUrl);
-        audio.play();
+    // Invoca el método play del AudioPlayer correspondiente
+    const handlePlaySound = (animal) => {
+        if (animal.sound && audioRefs.current[animal.id]) {
+            console.log("Reproduciendo sonido para animal id:", animal.id);
+            audioRefs.current[animal.id].play();
+        } else {
+            console.warn("No se encontró la referencia de audio para el animal:", animal);
+        }
     };
 
     return (
@@ -60,16 +121,6 @@ const Fauna = () => {
                                     <span className="infoIcon">&#9432;</span>
                                 </div>
                             )}
-                            <button
-                                className="soundButton"
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    playSound(animal.sound);
-                                }}
-                                aria-label={t('fauna.playSound')}
-                            >
-                                <i className="fas fa-volume-up"></i>
-                            </button>
                         </div>
                         <p className="faunaName">{t(animal.nameKey)}</p>
                         {selectedAnimal?.id === animal.id && (
@@ -84,6 +135,29 @@ const Fauna = () => {
                                     &times;
                                 </button>
                                 <p>{t(animal.infoKey)}</p>
+                                {animal.sound && (
+                                    <>
+                                        <button
+                                            className="playAudioButton"
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                handlePlaySound(animal);
+                                            }}
+                                        >
+                                            Reproducir Audio
+                                        </button>
+                                        {/* Se monta el componente AudioPlayer para el audio respectivo */}
+                                        <AudioPlayer
+                                            soundUrl={animal.sound}
+                                            ref={ref => {
+                                                if (ref) {
+                                                    audioRefs.current[animal.id] = ref;
+                                                    console.log(`Referencia asignada para animal id ${animal.id}`);
+                                                }
+                                            }}
+                                        />
+                                    </>
+                                )}
                             </div>
                         )}
                     </div>

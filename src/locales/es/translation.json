@@ -114,16 +114,48 @@
         "title": "Fauna",
         "subtitle": "Descubre los animales",
         "animal1": {
-            "name": "León",
-            "info": "El león es conocido como el rey de la selva."
+            "name": "Mono ardilla",
+            "info": "El mono ardilla es un primate ágil y curioso que habita en las copas de los árboles."
         },
         "animal2": {
-            "name": "Elefante",
-            "info": "Los elefantes son los animales terrestres más grandes del planeta."
+            "name": "Garrapatero pico liso",
+            "info": "El garrapatero pico liso se destaca por su pico fino, ideal para capturar insectos."
         },
         "animal3": {
-            "name": "Jirafa",
-            "info": "Las jirafas se destacan por sus largos cuellos."
+            "name": "Murciélago de lengua larga",
+            "info": "El murciélago de lengua larga utiliza su prolongada lengua para alimentarse de néctar y frutas."
+        },
+        "animal4": {
+            "name": "Olinguito",
+            "info": "El olinguito es un pequeño mamífero nocturno, pariente de los mapaches, que vive en bosques tropicales."
+        },
+        "animal5": {
+            "name": "Pinchaflor enmascarado",
+            "info": "El pinchaflor enmascarado es un ave diminuta con un pico especializado para la succión de néctar."
+        },
+        "animal6": {
+            "name": "Sicalis canario azafranado",
+            "info": "El sicalis canario azafranado es un pájaro colorido conocido por su canto y su vibrante plumaje."
+        },
+        "animal7": {
+            "name": "Tarántula",
+            "info": "La tarántula es una araña de gran tamaño, reconocida por su apariencia peluda y su paso lento."
+        },
+        "animal8": {
+            "name": "Tayra",
+            "info": "La tayra es un mamífero ágil y astuto, pariente de la comadreja, que habita en bosques tropicales."
+        },
+        "animal9": {
+            "name": "Torito cabecirrojo",
+            "info": "El torito cabecirrojo es un ave con rasgos distintivos en la cabeza, ideal para identificarla en la naturaleza."
+        },
+        "animal10": {
+            "name": "Tororoi volador",
+            "info": "El tororoi volador es una especie de ave ágil y elegante, reconocida por su capacidad de vuelo."
+        },
+        "animal11": {
+            "name": "Trogon collarejo",
+            "info": "El trogon collarejo es un ave tropical con un llamativo plumaje y un característico collar de colores."
         }
     }
 }
