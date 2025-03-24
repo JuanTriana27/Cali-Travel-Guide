@@ -8,7 +8,7 @@
 }
 
 .historiaHeader {
-  background: linear-gradient(135deg, #b32a43, #A60321);
+  background: linear-gradient(135deg, #91aec1, #508ca4);
   color: white;
   text-align: center;
   padding: 2rem;
@@ -55,7 +55,7 @@
 }
 
 .historiaText h2 {
-  color: #A60321;
+  color: #508ca4;
   margin-bottom: 1.5rem;
   font-size: 1.8rem;
 }
@@ -71,7 +71,7 @@
 
 .videoSection h2 {
   text-align: center;
-  color: #A60321;
+  color: #508ca4;
   margin-bottom: 2rem;
   font-size: 2rem;
 }
@@ -98,7 +98,7 @@
 }
 
 .videoThumbnail.active {
-  box-shadow: 0 0 15px rgba(166,3,33,0.5);
+  box-shadow: 0 0 15px #508ca4;
   transform: scale(1.02);
 }
 
@@ -111,7 +111,7 @@
 .localVideoThumbnail {
   width: 100%;
   height: 100%;
-  background: #A60321;
+  background: #508ca4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,7 +129,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(166, 3, 33, 0.7);
+  background: #508ca4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -183,7 +183,7 @@
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  color: #A60321;
+  color: #508ca4;
   transition: all 0.3s ease;
 }
 

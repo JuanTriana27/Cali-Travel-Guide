@@ -8,7 +8,7 @@
 }
 
 .fotografiasHeader {
-    background: linear-gradient(135deg, #b32a43, #A60321);
+    background: linear-gradient(135deg, #91aec1, #508ca4);
     color: white;
     text-align: center;
     padding: 2rem;
@@ -60,7 +60,7 @@
 
 .prevButton,
 .nextButton {
-    background-color: #A60321;
+    background-color: #508ca4;
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -71,7 +71,7 @@
 
 .prevButton:hover,
 .nextButton:hover {
-    background-color: #8a0320;
+    background-color: #508ca4;
 }
 
 .progressContainer {
@@ -87,7 +87,7 @@
 
 .progressBar {
     height: 100%;
-    background-color: #A60321;
+    background-color: #508ca4;
     transition: width 0.5s ease;
     min-width: 10px;
 }
@@ -102,7 +102,7 @@
     margin-top: 1rem;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #A60321;
+    color: #508ca4;
     text-align: center;
 }
 
@@ -132,7 +132,7 @@
 .closeButton {
     margin-top: 1rem;
     padding: 0.5rem 1.5rem;
-    background-color: #A60321;
+    background-color: #508ca4;
     color: white;
     border: none;
     border-radius: 5px;
@@ -141,7 +141,7 @@
 }
 
 .closeButton:hover {
-    background-color: #8a0320;
+    background-color: #508ca4;
 }
 
 @keyframes fadeIn {
