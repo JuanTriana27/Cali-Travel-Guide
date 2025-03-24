@@ -1,20 +1,19 @@
-/* Estructura General */
 .fotografias {
     font-family: 'Roboto', sans-serif;
     color: #333;
-    line-height: 1.6;
-    padding: 0;
-    margin: 0;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
     animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Encabezado */
 .fotografiasHeader {
-    background: linear-gradient(135deg, #F2F2F2, #A60321);
+    background: linear-gradient(135deg, #b32a43, #A60321);
     color: white;
     text-align: center;
     padding: 2rem;
-    animation: slideDown 1.2s ease-in-out;
+    margin-bottom: 2rem;
+    border-radius: 15px;
 }
 
 .fotografiasTitle {
@@ -30,7 +29,6 @@
     animation: fadeInSubtitle 2s ease forwards;
 }
 
-/* Slider */
 .slider {
     display: flex;
     flex-direction: column;
@@ -54,8 +52,6 @@
     transition: transform 0.3s ease;
 }
 
-
-/* Botones del slider */
 .sliderButtons {
     display: flex;
     gap: 1rem;
@@ -78,7 +74,6 @@
     background-color: #8a0320;
 }
 
-/* Barra de progreso */
 .progressContainer {
     width: 100%;
     max-width: 600px;
@@ -88,7 +83,6 @@
     margin-top: 1rem;
     overflow: hidden;
     border: 1px solid #ccc;
-    /* Borde temporal para depuración */
 }
 
 .progressBar {
@@ -96,7 +90,6 @@
     background-color: #A60321;
     transition: width 0.5s ease;
     min-width: 10px;
-    /* Asegura visibilidad mínima */
 }
 
 .progressText {
@@ -105,7 +98,6 @@
     left: 50%;
 }
 
-/* Mensaje de felicitación */
 .congratulations {
     margin-top: 1rem;
     font-size: 1.2rem;
@@ -114,7 +106,6 @@
     text-align: center;
 }
 
-/* Estilos del Modal */
 .modalOverlay {
     position: fixed;
     top: 0;
@@ -153,8 +144,6 @@
     background-color: #8a0320;
 }
 
-
-/* Animaciones */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -201,7 +190,6 @@
     }
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
     .sliderItem {
         max-width: 100%;

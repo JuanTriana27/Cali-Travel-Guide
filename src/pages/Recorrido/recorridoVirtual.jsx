@@ -8,7 +8,6 @@ import nipplejs from 'nipplejs';
 import "./recorridoVirtual.css";
 
 const RecorridoVirtual = () => {
-  // Eliminamos setMenuOpen ya que no se usa
   const mountRef = useRef(null);
   const rendererRef = useRef(null);
   const sceneRef = useRef(new THREE.Scene());
@@ -32,7 +31,6 @@ const RecorridoVirtual = () => {
   const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
   useEffect(() => {
-    // Guardamos la referencia actual del contenedor para usarla en el cleanup
     const currentMount = mountRef.current;
 
     const scene = sceneRef.current;
@@ -52,12 +50,12 @@ const RecorridoVirtual = () => {
     currentMount.appendChild(renderer.domElement);
     rendererRef.current = renderer;
 
-    // Configuración de OrbitControls (usado en modo no pointer lock)
+    // Configuración de OrbitControls
     const orbitControls = new OrbitControls(camera, renderer.domElement);
     orbitControls.enableDamping = true;
     orbitControlsRef.current = orbitControls;
 
-    // Configuración de PointerLockControls para movimiento estilo juego (escritorio)
+    // Configuración de PointerLockControls para movimiento
     const pointerLock = new PointerLockControls(camera, renderer.domElement);
     pointerLockRef.current = pointerLock;
     scene.add(pointerLock.getObject());
@@ -71,7 +69,6 @@ const RecorridoVirtual = () => {
     scene.add(plane);
     planeRef.current = plane;
 
-    // Configurar el joystick para móviles
     let joystickManager;
     if (isMobile) {
       joystickManager = nipplejs.create({
@@ -84,7 +81,6 @@ const RecorridoVirtual = () => {
       joystickManager.on('move', (evt, data) => {
         if (data && data.angle) {
           const angle = data.angle.radian;
-          // Se normaliza la fuerza; la distancia máxima se considera 50 (ajústalo si es necesario)
           const force = Math.min(data.distance, 50) / 50;
           movementVector.current.set(
             Math.cos(angle) * force,
@@ -98,7 +94,6 @@ const RecorridoVirtual = () => {
       });
     }
 
-    // Para escritorio: al hacer click se activa pointer lock si el movimiento está activo
     const handleClick = () => {
       if (!isMobile && movimientoActivo) {
         pointerLock.lock();
@@ -106,14 +101,13 @@ const RecorridoVirtual = () => {
     };
     renderer.domElement.addEventListener('click', handleClick);
 
-    // Ciclo de animación
     const clock = new THREE.Clock();
     const animate = () => {
       requestAnimationFrame(animate);
       const delta = clock.getDelta();
 
       if (movimientoActivo) {
-        const speed = 3; // Velocidad en m/s
+        const speed = 3;
         const distance = speed * delta;
         let controlObject;
         if (pointerLock.isLocked) {
@@ -123,11 +117,9 @@ const RecorridoVirtual = () => {
         }
 
         if (isMobile) {
-          // Movimiento según el joystick
           const move = movementVector.current.clone().multiplyScalar(distance);
           controlObject.position.add(move);
         } else if (pointerLock.isLocked) {
-          // Movimiento en escritorio con teclado
           const forward = new THREE.Vector3();
           camera.getWorldDirection(forward);
           forward.y = 0;
@@ -157,14 +149,12 @@ const RecorridoVirtual = () => {
         }
       }
 
-      // Desactivar OrbitControls cuando pointer lock está activo
       orbitControls.enabled = !pointerLock.isLocked;
       orbitControls.update();
       renderer.render(scene, camera);
     };
     animate();
 
-    // Cleanup: usamos la variable currentMount para evitar que mountRef.current haya cambiado
     return () => {
       if (currentMount && rendererRef.current) {
         currentMount.removeChild(rendererRef.current.domElement);
@@ -177,7 +167,6 @@ const RecorridoVirtual = () => {
     };
   }, [movimientoActivo, isMobile]);
 
-  // Actualiza el estado de las teclas para escritorio
   const handleKey = (e, isKeyDown) => {
     switch (e.key.toLowerCase()) {
       case 'w': movement.current.forward = isKeyDown; break;
@@ -277,7 +266,6 @@ const RecorridoVirtual = () => {
           </button>
         </div>
       </div>
-      {/* Contenedor para el joystick (solo en móviles) */}
       <div id="joystickContainer" style={{
         position: 'absolute',
         bottom: '20px',

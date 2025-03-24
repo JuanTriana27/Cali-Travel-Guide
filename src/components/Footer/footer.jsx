@@ -9,7 +9,6 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footerContainer">
-                {/* Columna 1 */}
                 <div className="footerColumn">
                     <h3>{t('footer.visitUs')}</h3>
                     <p>
@@ -20,7 +19,6 @@ const Footer = () => {
                     <button className="footerButton">{t('footer.moreInfo')}</button>
                 </div>
 
-                {/* Columna 2 */}
                 <div className="footerColumn">
                     <h3>{t('footer.usefulLinks')}</h3>
                     <ul>
@@ -30,7 +28,6 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Columna 3 */}
                 <div className="footerColumn">
                     <h3>{t('footer.socialMedia')}</h3>
                     <div className="footerSocials">
@@ -60,7 +57,6 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Barra inferior */}
             <div className="footerBottom">
                 <p>{t('footer.copyRight')}</p>
                 <a href="https://www.google.com/search?client=opera&q=terminos+y+condiciones&sourceid=opera&ie=UTF-8&oe=UTF-8">

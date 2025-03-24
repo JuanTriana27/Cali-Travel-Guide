@@ -1,7 +1,6 @@
-// src/components/Navbar/navbar.jsx
-import React from "react";
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import React from "react"; // Importamos la librería de React
+import { Link } from 'react-router-dom'; // Importamos el componente Link de react-router-dom
+import { useTranslation } from 'react-i18next'; // Importamos el hook useTranslation de react-i18next
 import "./navbar.css";
 
 const Navbar = () => {
@@ -41,12 +40,16 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
+          <Link to="/fauna" className="navbarLink" onClick={closeMenu}>
+            {t('navbar.fauna')}
+          </Link>
+        </li>
+        <li>
           <Link to="/contactenos" className="navbarLink" onClick={closeMenu}>
             {t('navbar.contactenos')}
           </Link>
         </li>
         <li>
-          {/* Opción de selección de idioma */}
           <select onChange={handleChangeLanguage} value={i18n.language} className="languageSelect">
             <option value="es">ES</option>
             <option value="en">EN</option>

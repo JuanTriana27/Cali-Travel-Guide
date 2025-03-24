@@ -3,14 +3,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 80px - 200px); /* Resta navbar y footer */
+  min-height: calc(100vh - 80px - 200px);
   width: 100%;
   padding: 20px;
   gap: 2rem;
-  flex-wrap: wrap; /* Para móviles desde el principio */
+  flex-wrap: wrap;
 }
 
-/* Versión desktop */
 @media (min-width: 769px) {
   .home {
     flex-wrap: nowrap;
@@ -25,19 +24,18 @@
   }
 }
 
-/* Versión móvil mejorada */
 @media (max-width: 768px) {
   .home {
     min-height: calc(100vh - 80px);
-    padding: 0; /* Eliminamos el padding del contenedor */
-    gap: 0; /* Eliminamos el espacio entre cards */
+    padding: 0;
+    gap: 0;
   }
   
   .card {
     width: 100%;
     min-height: 30vh;
     flex: none;
-    margin: 0; /* Aseguramos que no tenga márgenes */
-    border-radius: 0; /* Opcional: si quieres eliminar bordes redondeados */
+    margin: 0;
+    border-radius: 0;
   }
 }

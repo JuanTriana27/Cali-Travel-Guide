@@ -59,7 +59,6 @@ const Contactenos = () => {
   return (
     <main className="contact-container">
       <div className="contact-card">
-        {/* Sección del Formulario */}
         <div className="form-section">
           <h2>{t('contactenos.writeUs')}</h2>
           <form onSubmit={handleSubmit}>
@@ -106,7 +105,6 @@ const Contactenos = () => {
           </form>
         </div>
 
-        {/* Sección de Información de Contacto */}
         <div className="info-section">
           <h3>{t('contactenos.directContact')}</h3>
           <div className="contact-item">
@@ -132,10 +130,6 @@ const Contactenos = () => {
           </div>
           <div className="contact-item">
             <i className="fas fa-clock"></i>
-            <div>
-              <h4>{t('contactenos.hours')}</h4>
-              <p>{t('contactenos.hoursText')}</p>
-            </div>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@
     "navbar": {
         "inicio": "INICIO",
         "lugares": "LUGARES",
+        "fauna": "FAUNA",
         "contactenos": "CONTACTENOS",
         "idioma": "IDIOMA"
     },
@@ -94,14 +95,12 @@
         "success": "🎉 Mensaje enviado y guardado!",
         "error": "❌ Error",
         "directContact": "Contacto Directo",
-        "mainOffice": "Oficina Principal",
-        "address": "Carrera 24 #52-01\nCali, Valle del Cauca",
+        "mainOffice": "Direccion Principal",
+        "address": "Cra. 122 #6-65, Barrio Pance,\nCali, Valle del Cauca",
         "phone": "Teléfono",
-        "phoneNumber": "+57 (602) 555-1234",
+        "phoneNumber": "(602) 4882222",
         "emailTitle": "Correo Electrónico",
-        "emailAddress": "contacto@calitravelguide.com",
-        "hours": "Horarios",
-        "hoursText": "Lun-Vie: 8AM - 6PM\nSáb: 9AM - 1PM"
+        "emailAddress": "contacto@calitravelguide.com"
     },
     "fotografias": {
         "title": "Fotografías",
@@ -110,5 +109,21 @@
         "next": "Siguiente",
         "congratulations": "¡Felicidades, has visto todas las fotografías!",
         "modalMessage": "¡Gracias por explorar nuestra galería de fotos!"
+    },
+    "fauna": {
+        "title": "Fauna",
+        "subtitle": "Descubre los animales",
+        "animal1": {
+            "name": "León",
+            "info": "El león es conocido como el rey de la selva."
+        },
+        "animal2": {
+            "name": "Elefante",
+            "info": "Los elefantes son los animales terrestres más grandes del planeta."
+        },
+        "animal3": {
+            "name": "Jirafa",
+            "info": "Las jirafas se destacan por sus largos cuellos."
+        }
     }
 }

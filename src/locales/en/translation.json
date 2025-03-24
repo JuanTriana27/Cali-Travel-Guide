@@ -2,6 +2,7 @@
     "navbar": {
         "inicio": "HOME",
         "lugares": "PLACES",
+        "fauna": "WILDLIFE",
         "contactenos": "CONTACT US",
         "idioma": "LANGUAGE"
     },
@@ -110,5 +111,21 @@
         "next": "Next",
         "congratulations": "Congratulations, you've seen all the photographs!",
         "modalMessage": "Thank you for exploring our photo gallery!"
+    },
+    "fauna": {
+        "title": "Fauna",
+        "subtitle": "Discover the animals",
+        "animal1": {
+            "name": "Lion",
+            "info": "The lion is known as the king of the jungle."
+        },
+        "animal2": {
+            "name": "Elephant",
+            "info": "Elephants are the largest land animals on Earth."
+        },
+        "animal3": {
+            "name": "Giraffe",
+            "info": "Giraffes are famous for their long necks."
+        }
     }
 }

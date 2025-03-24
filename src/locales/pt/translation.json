@@ -2,6 +2,7 @@
   "navbar": {
     "inicio": "INÍCIO",
     "lugares": "LOCAIS",
+    "fauna": "FAUNA",
     "contactenos": "CONTATO",
     "idioma": "IDIOMA"
   },
@@ -110,5 +111,21 @@
     "next": "Próximo",
     "congratulations": "Parabéns, você viu todas as fotografias!",
     "modalMessage": "Obrigado por explorar nossa galeria de fotos!"
+  },
+  "fauna": {
+    "title": "Fauna",
+    "subtitle": "Descubra os animais",
+    "animal1": {
+      "name": "Leão",
+      "info": "O leão é conhecido como o rei da selva."
+    },
+    "animal2": {
+      "name": "Elefante",
+      "info": "Os elefantes são os maiores animais terrestres da Terra."
+    },
+    "animal3": {
+      "name": "Girafa",
+      "info": "As girafas são famosas por seus pescoços longos."
+    }
   }
 }

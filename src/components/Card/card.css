@@ -10,7 +10,6 @@
   transition: transform 0.4s ease;
 }
 
-/* ========== CARD STYLES ========== */
 .card {
   width: 100%;
   position: relative;
@@ -71,7 +70,6 @@
   z-index: 1;
 }
 
-/* ========== DESKTOP SPECIFIC STYLES ========== */
 @media (min-width: 769px) {
   .cardOverlay {
     bottom: -40%;
@@ -93,7 +91,6 @@
   }
 }
 
-/* ========== MOBILE SPECIFIC STYLES ========== */
 @media (max-width: 768px) {
   .navbar {
     padding: 0 1rem;
@@ -151,7 +148,6 @@
     display: block;
   }
 
-  /* Card Mobile Styles */
   .cardOverlay {
     bottom: 0;
     height: 0;
@@ -193,7 +189,6 @@
   }
 }
 
-/* ========== ANIMATIONS ========== */
 @keyframes slideIn {
   from {
     opacity: 0;

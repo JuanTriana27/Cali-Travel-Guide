@@ -11,6 +11,7 @@ import Contactenos from './pages/Contactenos/contactenos.jsx';
 import Lugares from './pages/Lugares/lugares.jsx';
 import Horarios from './pages/Horarios/horarios.jsx';
 import Recorrido from './pages/Recorrido/recorridoVirtual.jsx';
+import Fauna from './pages/Fauna/fauna.jsx';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route path="/lugares" element={<Lugares />} />
             <Route path="/horarios" element={<Horarios />} />
             <Route path="/recorrido" element={<Recorrido />} />
+            <Route path="/fauna" element={<Fauna />} />
           </Routes>
         </main>
 

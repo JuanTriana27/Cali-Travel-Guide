@@ -7,7 +7,6 @@
   margin: 0 auto;
 }
 
-/* Encabezado */
 .historiaHeader {
   background: linear-gradient(135deg, #b32a43, #A60321);
   color: white;
@@ -27,7 +26,6 @@
   font-weight: 300;
 }
 
-/* Contenido principal */
 .historiaContent {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -67,7 +65,6 @@
   line-height: 1.8;
 }
 
-/* Sección de Videos */
 .videoSection {
   margin: 3rem 0;
 }
@@ -162,7 +159,6 @@
   justify-content: center;
 }
 
-/* Reproductor inline */
 .inlineVideoPlayer {
   position: relative;
   width: 100%;
@@ -196,7 +192,6 @@
   transform: scale(1.1);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .historiaContent {
     grid-template-columns: 1fr;

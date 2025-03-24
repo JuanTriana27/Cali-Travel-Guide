@@ -20,6 +20,7 @@ exports.handler = async (event) => {
         body: JSON.stringify({ message: 'Mensaje guardado' }, null, 2)
       };
     }
+
     // Manejo para GET: Listar todos los contactos
     else if (event.httpMethod === 'GET') {
       const contacts = await contactsCollection.find({}).toArray();
@@ -29,12 +30,13 @@ exports.handler = async (event) => {
         body: JSON.stringify(contacts, null, 2)
       };
     }
-    // Manejo para PUT: Actualizar un contacto existente (reemplaza el documento, conservando createdAt)
+
+    // Manejo para PUT: Actualizar un contacto existente
     else if (event.httpMethod === 'PUT') {
       const data = JSON.parse(event.body);
       if (!data.id) {
-        return { 
-          statusCode: 400, 
+        return {
+          statusCode: 400,
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ error: 'ID es requerido para actualizar' }, null, 2)
         };
@@ -42,8 +44,8 @@ exports.handler = async (event) => {
       const id = data.id;
       const existing = await contactsCollection.findOne({ _id: new ObjectId(id) });
       if (!existing) {
-        return { 
-          statusCode: 404, 
+        return {
+          statusCode: 404,
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ error: 'Contacto no encontrado' }, null, 2)
         };
@@ -75,7 +77,8 @@ exports.handler = async (event) => {
         };
       }
     }
-    // Manejo para DELETE: Eliminar un contacto (se espera el id en el body)
+
+    // Manejo para DELETE: Eliminar un contacto
     else if (event.httpMethod === 'DELETE') {
       const data = JSON.parse(event.body || '{}');
       const id = data.id;
@@ -101,6 +104,7 @@ exports.handler = async (event) => {
         };
       }
     }
+
     // Método no permitido
     else {
       return {

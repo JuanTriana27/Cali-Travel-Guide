@@ -16,7 +16,6 @@ const Horarios = () => {
             </header>
 
             <div className="content-wrapper">
-                {/* Sección de Información Principal */}
                 <div className="info-section">
                     <div className="schedule-card">
                         <div className="schedule-section">
@@ -78,19 +77,6 @@ const Horarios = () => {
                             <div className="step">
                                 <div className="step-number">1</div>
                                 <p>
-                                    {t('horarios.regStep1')}<br />
-                                    <a
-                                        href="https://www.cali.gov.co/dagma"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        www.cali.gov.co/dagma
-                                    </a>
-                                </p>
-                            </div>
-                            <div className="step">
-                                <div className="step-number">2</div>
-                                <p>
                                     {t('horarios.regStep2')}<br />
                                     <a
                                         href="https://registerapp.testweb2024.com"
@@ -102,14 +88,13 @@ const Horarios = () => {
                                 </p>
                             </div>
                             <div className="step">
-                                <div className="step-number">3</div>
+                                <div className="step-number">2</div>
                                 <p>{t('horarios.regStep3')}</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Sección del Mapa */}
                 <div className="map-section">
                     <h2>
                         <i className="fas fa-map-marked-alt"></i> {t('horarios.mapTitle')}

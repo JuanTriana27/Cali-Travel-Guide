@@ -12,7 +12,6 @@ const Fotografias = () => {
     const [showModal, setShowModal] = useState(false);
     const [loadedIndices, setLoadedIndices] = useState(new Set());
 
-    // Precarga de imágenes
     const preloadImages = useCallback((index) => {
         const preload = (idx) => {
             if (idx >= 0 && idx < imagePaths.length && !loadedIndices.has(idx)) {
@@ -23,7 +22,7 @@ const Fotografias = () => {
         };
 
         [index - 1, index, index + 1].forEach(preload);
-    }, [loadedIndices]); // Eliminamos imagePaths.length de las dependencias
+    }, [loadedIndices]);
 
     useEffect(() => {
         preloadImages(currentIndex);
@@ -33,20 +32,27 @@ const Fotografias = () => {
         if (loadedIndices.size === imagePaths.length) {
             setShowModal(true);
         }
-    }, [loadedIndices]); // Eliminamos imagePaths.length de las dependencias
+    }, [loadedIndices]);
 
     const navigationHandler = useCallback((direction) => {
         setCurrentIndex(prev => {
-            const newIndex = direction === 'next' 
-                ? (prev + 1) % imagePaths.length 
+            const newIndex = direction === 'next'
+                ? (prev + 1) % imagePaths.length
                 : (prev - 1 + imagePaths.length) % imagePaths.length;
             return newIndex;
         });
-    }, []); // Eliminamos imagePaths.length de las dependencias
+    }, []);
 
     const closeModal = useCallback(() => {
         setShowModal(false);
         setLoadedIndices(new Set());
+    }, []);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentIndex(prevIndex => (prevIndex + 1) % imagePaths.length);
+        }, 3000);
+        return () => clearInterval(timer);
     }, []);
 
     return (
@@ -60,8 +66,8 @@ const Fotografias = () => {
                 <div className="sliderItem">
                     <img
                         src={imagePaths[currentIndex]}
-                        alt={t(`fotografias.imageAlt${currentIndex + 1}`, 
-                             { defaultValue: t('fotografias.imageAlt') })}
+                        alt={t(`fotografias.imageAlt${currentIndex + 1}`,
+                            { defaultValue: t('fotografias.imageAlt') })}
                         className="sliderImage"
                         loading="lazy"
                         onError={(e) => {
@@ -70,17 +76,17 @@ const Fotografias = () => {
                         }}
                     />
                 </div>
-                
+
                 <div className="sliderButtons">
-                    <button 
-                        className="prevButton" 
+                    <button
+                        className="prevButton"
                         onClick={() => navigationHandler('prev')}
                         aria-label={t('fotografias.prev')}
                     >
                         {t('fotografias.prev')}
                     </button>
-                    <button 
-                        className="nextButton" 
+                    <button
+                        className="nextButton"
                         onClick={() => navigationHandler('next')}
                         aria-label={t('fotografias.next')}
                     >
@@ -94,8 +100,8 @@ const Fotografias = () => {
                     <div className="modalContent">
                         <h2>{t('fotografias.congratulations')}</h2>
                         <p>{t('fotografias.modalMessage')}</p>
-                        <button 
-                            className="closeButton" 
+                        <button
+                            className="closeButton"
                             onClick={closeModal}
                             aria-label={t('fotografias.close')}
                         >

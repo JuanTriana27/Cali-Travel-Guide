@@ -2,6 +2,7 @@
     "navbar": {
         "inicio": "ACCUEIL",
         "lugares": "LIEUX",
+        "fauna": "FAUNE",
         "contactenos": "CONTACTEZ-NOUS",
         "idioma": "LANGUE"
     },
@@ -110,5 +111,21 @@
         "next": "Suivant",
         "congratulations": "Félicitations, vous avez vu toutes les photographies !",
         "modalMessage": "Merci d'avoir exploré notre galerie de photos !"
+    },
+    "fauna": {
+        "title": "Faune",
+        "subtitle": "Découvrez les animaux",
+        "animal1": {
+            "name": "Lion",
+            "info": "Le lion est connu comme le roi de la jungle."
+        },
+        "animal2": {
+            "name": "Éléphant",
+            "info": "Les éléphants sont les plus grands animaux terrestres sur Terre."
+        },
+        "animal3": {
+            "name": "Girafe",
+            "info": "Les girafes sont célèbres pour leur long cou."
+        }
     }
 }
