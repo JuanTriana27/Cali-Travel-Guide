@@ -118,7 +118,7 @@ const Fauna = () => {
                             />
                             {selectedAnimal?.id !== animal.id && (
                                 <div className="faunaOverlay">
-                                    <span className="infoIcon">&#9432;</span>
+                                    
                                 </div>
                             )}
                         </div>
