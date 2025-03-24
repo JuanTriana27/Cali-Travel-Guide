@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../../pages/Fauna/fauna.css';
 
-// Datos de fauna con la ruta del sonido de cada animal
 const faunaData = [
     {
         id: 1,
@@ -57,15 +56,14 @@ const Fauna = () => {
                                 className="faunaThumbnail"
                             />
                             {selectedAnimal?.id !== animal.id && (
-                                <div className="cardOverlay">
+                                <div className="faunaOverlay">
                                     <span className="infoIcon">&#9432;</span>
                                 </div>
                             )}
-                            {/* Botón de sonido */}
                             <button
                                 className="soundButton"
                                 onClick={(e) => {
-                                    e.stopPropagation(); // Evita que se active la selección de la tarjeta
+                                    e.stopPropagation();
                                     playSound(animal.sound);
                                 }}
                                 aria-label={t('fauna.playSound')}
