@@ -49,7 +49,7 @@
   position: absolute;
   width: 50%;
   height: 2px;
-  background-color: #A60321;
+  background-color: #508ca4;
   bottom: 0;
   left: 25%;
   transform: scaleX(0);
@@ -92,12 +92,12 @@
 }
 
 .footerColumn ul li a:hover {
-  color: #A60321;
+  color: #508ca4;
   transform: translateX(8px);
 }
 
 .footerButton {
-  background-color: #A60321;
+  background-color: #508ca4;
   color: #fff;
   padding: 0.8rem 1.5rem;
   border: none;
@@ -110,7 +110,7 @@
 }
 
 .footerButton:hover {
-  background-color: #8C0327;
+  background-color: #508ca4;
   transform: scale(1.05);
 }
 

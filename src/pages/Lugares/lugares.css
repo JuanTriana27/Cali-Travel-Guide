@@ -6,7 +6,7 @@
   
   .lugares-title {
     text-align: center;
-    color: #A60321;
+    color: #508ca4;
     margin-bottom: 2rem;
     font-size: 2.5rem;
   }
@@ -26,7 +26,7 @@
   }
   
   .lugar-card.destacado {
-    border: 3px solid #A60321;
+    border: 3px solid #508ca4;
   }
   
   .lugar-card:hover {
@@ -37,7 +37,7 @@
     width: 100%;
     height: 250px;
     object-fit: cover;
-    border-bottom: 3px solid #A60321;
+    border-bottom: 3px solid #508ca4;
   }
   
   .lugar-content {
@@ -52,7 +52,7 @@
   
   .lugar-button {
     display: inline-block;
-    background: #A60321;
+    background: #508ca4;
     color: white;
     padding: 0.8rem 1.5rem;
     border-radius: 25px;
@@ -62,7 +62,7 @@
   }
   
   .lugar-button:hover {
-    background: #A60321;
+    background: #508ca4;
   }
   
   .proximamente-container {
@@ -74,7 +74,7 @@
   
   .proximamente-card {
     background: #f8f9fa;
-    border: 2px dashed #A60321;
+    border: 2px dashed #508ca4;
     border-radius: 15px;
     padding: 2rem;
     text-align: center;
@@ -102,7 +102,7 @@
   .dot {
     width: 10px;
     height: 10px;
-    background: #A60321;
+    background: #508ca4;
     border-radius: 50%;
     animation: bounce 1.4s infinite ease-in-out;
   }

@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
-  background-color: #A60321;
+  background-color: #508ca4;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -60,7 +60,7 @@
 }
 
 .navbarMenu li:hover {
-  color: #5b021a;
+  color: #4d5052;
   background-color: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
 }
@@ -124,7 +124,7 @@
     flex-direction: column;
     width: 100%;
     max-width: 300px;
-    background-color: #A60321;
+    background-color: #bfd7ea;
     border-radius: 0 0 0 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     padding: 1rem 0;
@@ -154,7 +154,7 @@
 
   .navbarMenu li:hover {
     transform: translateX(10px);
-    color: #5b021a;
+    color: #91aec1;
   }
 
   #menuIcon {
