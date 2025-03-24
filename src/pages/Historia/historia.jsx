@@ -8,18 +8,18 @@ const videoConfig = {
   en: [
     {
       id: 1,
-      url: '/videos/Video1.mp4',
+      url: '/videos/Video1_En.mp4',
       titleKey: 'historia.titleVideo1',
       isLocal: true
     },
     {
       id: 2,
-      url: 'https://youtu.be/EN_VIDEO_2',
+      url: '/videos/Video2_En.mp4',
       titleKey: 'historia.titleVideo2'
     },
     {
       id: 3,
-      url: 'https://youtu.be/EN_VIDEO_3',
+      url: '/videos/Video3_En.mp4',
       titleKey: 'historia.titleVideo3'
     }
   ],
