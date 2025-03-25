@@ -50,12 +50,12 @@ const videoConfig = {
     },
     {
       id: 2,
-      url: 'https://youtu.be/FR_VIDEO_2',
+      url: '/videos/Video2_Fr.mp4',
       titleKey: 'historia.titleVideo2'
     },
     {
       id: 3,
-      url: 'https://youtu.be/FR_VIDEO_3',
+      url: '/videos/Video3_Fr.mp4',
       titleKey: 'historia.titleVideo3'
     }
   ],
@@ -68,12 +68,12 @@ const videoConfig = {
     },
     {
       id: 2,
-      url: 'https://youtu.be/PT_VIDEO_2',
+      url: '/videos/Video2_Pt.mp4',
       titleKey: 'historia.titleVideo2'
     },
     {
       id: 3,
-      url: 'https://youtu.be/PT_VIDEO_3',
+      url: '/videos/Video3_Pt.mp4',
       titleKey: 'historia.titleVideo3'
     }
   ]
