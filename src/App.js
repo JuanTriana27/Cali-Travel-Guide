@@ -1,7 +1,7 @@
-// App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './i18n';
+import './global.css';  // ✅ Añade esta línea
 import Navbar from './components/Navbar/navbar.jsx';
 import Home from './pages/Home/home.jsx';
 import Footer from './components/Footer/footer.jsx';
@@ -13,7 +13,24 @@ import Horarios from './pages/Horarios/horarios.jsx';
 import Recorrido from './pages/Recorrido/recorridoVirtual.jsx';
 import Fauna from './pages/Fauna/fauna.jsx';
 
+// ✅ Añade este custom hook
+const usePreventSelection = () => {
+  React.useEffect(() => {
+    const blockEvent = (e) => e.preventDefault();
+
+    document.addEventListener('selectstart', blockEvent);
+    document.addEventListener('dragstart', blockEvent);
+
+    return () => {
+      document.removeEventListener('selectstart', blockEvent);
+      document.removeEventListener('dragstart', blockEvent);
+    };
+  }, []);
+};
+
 function App() {
+  usePreventSelection();  // ✅ Activa el bloqueo aquí
+
   return (
     <Router>
       <div className="app-container" style={{
