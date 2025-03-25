@@ -23,6 +23,19 @@ const Fotografias = () => {
     const videoRef = useRef(null);
     const currentMedia = mediaFiles[currentIndex];
 
+    // Definir navigationHandler antes de usarlo en useEffect
+    const navigationHandler = useCallback((direction) => {
+        if (videoRef.current) {
+            videoRef.current.pause();
+        }
+        setCurrentIndex(prev => {
+            let newIndex = direction === 'next' 
+                ? (prev + 1) % mediaFiles.length 
+                : (prev - 1 + mediaFiles.length) % mediaFiles.length;
+            return newIndex;
+        });
+    }, []);
+
     const preloadMedia = useCallback(async () => {
         setIsLoading(true);
         const total = mediaFiles.length;
@@ -66,12 +79,10 @@ const Fotografias = () => {
         if (videoRef.current) {
             const video = videoRef.current;
             const isVideo = ['mp4', 'mov', 'avi'].includes(currentMedia.type);
-
             if (isVideo) {
                 video.load();
-                const playPromise = video.play().catch(() => {});
+                video.play().catch(() => {});
                 const handleEnd = () => !isSlidingPaused && navigationHandler('next');
-                
                 video.addEventListener('ended', handleEnd);
                 return () => {
                     video.pause();
@@ -79,7 +90,7 @@ const Fotografias = () => {
                 };
             }
         }
-    }, [currentIndex, isSlidingPaused]);
+    }, [currentIndex, isSlidingPaused, currentMedia, navigationHandler]);
 
     useEffect(() => {
         if (!hasCompleted) {
@@ -93,19 +104,6 @@ const Fotografias = () => {
             setHasCompleted(true);
         }
     }, [viewedMedia, isLoading, hasCompleted]);
-
-    const navigationHandler = useCallback((direction) => {
-        if (videoRef.current) {
-            videoRef.current.pause();
-        }
-        
-        setCurrentIndex(prev => {
-            let newIndex = direction === 'next' 
-                ? (prev + 1) % mediaFiles.length 
-                : (prev - 1 + mediaFiles.length) % mediaFiles.length;
-            return newIndex;
-        });
-    }, []);
 
     const closeModal = useCallback(() => {
         setShowModal(false);
@@ -122,7 +120,7 @@ const Fotografias = () => {
         }, SLIDER_INTERVAL);
 
         return () => clearInterval(timer);
-    }, [isSlidingPaused, showModal, isLoading, currentMedia]);
+    }, [isSlidingPaused, showModal, isLoading, currentMedia, navigationHandler]);
 
     useEffect(() => {
         preloadMedia();
