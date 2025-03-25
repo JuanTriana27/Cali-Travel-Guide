@@ -14,12 +14,39 @@
     padding: 2rem;
     margin-bottom: 2rem;
     border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* .fotografiasHeader::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+        rgba(255,255,255,0.1) 25%,
+        transparent 25%, 
+        transparent 50%,
+        rgba(255,255,255,0.1) 50%, 
+        rgba(255,255,255,0.1) 75%,
+        transparent 75%);
+    background-size: 40px 40px;
+    animation: headerStripes 3s linear infinite;
+} */
+
+@keyframes headerStripes {
+    0% { background-position: 0 0; }
+    100% { background-position: 40px 40px; }
 }
 
 .fotografiasTitle {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
     animation: fadeInTitle 1.5s ease forwards;
+    position: relative;
+    z-index: 1;
 }
 
 .fotografiasSubtitle {
@@ -27,6 +54,8 @@
     font-weight: 300;
     margin-top: 0;
     animation: fadeInSubtitle 2s ease forwards;
+    position: relative;
+    z-index: 1;
 }
 
 .slider {
@@ -40,6 +69,7 @@
     width: 100%;
     max-width: 600px;
     margin-bottom: 1rem;
+    position: relative;
 }
 
 .sliderImage {
@@ -49,13 +79,27 @@
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    cursor: pointer;
+}
+
+.sliderImage.loading {
+    background: linear-gradient(
+        to right,
+        #f6f7f8 0%,
+        #e9ebee 20%,
+        #f6f7f8 40%,
+        #f6f7f8 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 1.5s infinite linear;
 }
 
 .sliderButtons {
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
+    align-items: center;
 }
 
 .prevButton,
@@ -66,44 +110,41 @@
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 .prevButton:hover,
 .nextButton:hover {
-    background-color: #508ca4;
+    background-color: #3a6d7f;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-.progressContainer {
-    width: 100%;
-    max-width: 600px;
-    height: 20px;
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    margin-top: 1rem;
+.image-counter {
+    font-size: 1rem;
+    color: #fff;
+    background: rgba(80, 140, 164, 0.9);
+    padding: 5px 15px;
+    border-radius: 20px;
+    animation: slideInCounter 0.5s ease-out;
+}
+
+.loading-bar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 15px auto;
+    width: 60%;
+    border-radius: 2px;
     overflow: hidden;
-    border: 1px solid #ccc;
+    position: relative;
 }
 
-.progressBar {
+.loading-progress {
     height: 100%;
-    background-color: #508ca4;
-    transition: width 0.5s ease;
-    min-width: 10px;
-}
-
-.progressText {
-    color: white;
-    font-size: 0.85rem;
-    left: 50%;
-}
-
-.congratulations {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #508ca4;
-    text-align: center;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: width 0.3s ease;
 }
 
 .modalOverlay {
@@ -117,81 +158,82 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    backdrop-filter: blur(3px);
 }
 
 .modalContent {
-    background: white;
+    background: linear-gradient(135deg, #91aec1, #508ca4);
+    color: white;
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     max-width: 400px;
-    animation: fadeIn 0.3s ease-in-out;
+    animation: modalEntry 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
 }
 
 .closeButton {
     margin-top: 1rem;
     padding: 0.5rem 1.5rem;
-    background-color: #508ca4;
-    color: white;
+    background: rgba(255, 255, 255, 0.9);
+    color: #508ca4;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: bold;
 }
 
 .closeButton:hover {
-    background-color: #508ca4;
+    background: #fff;
+    transform: scale(1.05);
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes fadeInTitle {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInSubtitle {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes slideInCounter {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes modalEntry {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
 }
 
 @media (max-width: 768px) {
-    .sliderItem {
-        max-width: 100%;
+    .sliderImage {
+        height: 300px;
+    }
+    
+    .fotografiasTitle {
+        font-size: 2rem;
+    }
+    
+    .sliderButtons {
+        flex-direction: column;
+    }
+    
+    .image-counter {
+        order: -1;
     }
 }
