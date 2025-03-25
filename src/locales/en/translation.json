@@ -110,7 +110,8 @@
         "prev": "Previous",
         "next": "Next",
         "congratulations": "Congratulations, you've seen all the photographs!",
-        "modalMessage": "Thank you for exploring our photo gallery!"
+        "modalMessage": "Thank you for exploring our photo gallery!",
+        "close": "Close"
     },
     "fauna": {
         "title": "Fauna",
