@@ -29,7 +29,7 @@ exports.handler = async (event) => {
       };
     }
 
-    // Manejo para GET: Enviar correos uno a uno y devolver los contactos
+    // Manejo para GET: Enviar correos de forma concurrente y devolver los contactos
     else if (event.httpMethod === 'GET') {
       const contacts = await contactsCollection.find({}).toArray();
 
@@ -49,18 +49,21 @@ exports.handler = async (event) => {
         }
       });
 
-      // Enviar correos de forma secuencial a todos los contactos que tengan email
-      for (const contact of contacts) {
-        if (contact.email) {
-          await transporter.sendMail({
-            from: process.env.EMAIL_USER,
-            to: contact.email,
-            subject: 'Notificación de Contacto',
-            text: `Hola ${contact.name || 'usuario'}, este es un mensaje automático de prueba.`
-          });
-          await delay(1000);
-        }
-      }
+      // Filtrar contactos que tienen email
+      const contactsWithEmail = contacts.filter(contact => contact.email);
+
+      // Enviar todos los correos de forma concurrente
+      const emailPromises = contactsWithEmail.map(contact =>
+        transporter.sendMail({
+          from: process.env.EMAIL_USER,
+          to: contact.email,
+          subject: 'Notificación de Contacto',
+          text: `Hola ${contact.name || 'usuario'}, este es un mensaje automático de prueba.`
+        })
+      );
+
+      // Esperar a que todos se envíen
+      await Promise.all(emailPromises);
 
       // Devolver la lista de contactos junto con un mensaje de confirmación
       return {
@@ -68,7 +71,7 @@ exports.handler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(
           {
-            message: 'Correos Enviados',
+            message: 'Correos enviados',
             contacts: contacts
           },
           null,
