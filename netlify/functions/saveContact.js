@@ -74,7 +74,7 @@ exports.handler = async (event) => {
           attachments: [
             {
               filename: 'CARTEL.png',
-              path: 'src/assets/PDF/CARTEL.png',
+              path: 'https://registerapp.testweb2024.com/images/pieza1.png',
               cid: 'cartelImage'
             }
           ]
