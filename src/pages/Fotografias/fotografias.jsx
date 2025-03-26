@@ -13,7 +13,6 @@ const mediaFiles = mediaContext.keys().map(path => ({
 const Fotografias = () => {
     const { t } = useTranslation();
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [loadingProgress] = useState(0);
     const [isSlidingPaused, setIsSlidingPaused] = useState(false);
     const [viewedMedia, setViewedMedia] = useState(new Set());
     const [isLoading, setIsLoading] = useState(true);
@@ -88,12 +87,6 @@ const Fotografias = () => {
             <header className="fotografiasHeader">
                 <h1 className="fotografiasTitle">{t('fotografias.title')}</h1>
                 <p className="fotografiasSubtitle">{t('fotografias.subtitle')}</p>
-                {isLoading && (
-                    <div className="loading-bar">
-                        <div className="loading-progress"
-                            style={{ width: `${loadingProgress}%` }} />
-                    </div>
-                )}
             </header>
 
             <section className="slider">
