@@ -43,6 +43,7 @@
 /* Botón para abrir direcciones */
 .map-button {
     position: absolute;
+    cursor: pointer;
     bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
