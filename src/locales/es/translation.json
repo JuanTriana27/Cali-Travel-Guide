@@ -2,6 +2,7 @@
     "navbar": {
         "inicio": "INICIO",
         "lugares": "LUGARES",
+        "llegar": "CÓMO LLEGAR",
         "fauna": "FAUNA",
         "contactenos": "CONTACTENOS",
         "idioma": "IDIOMA"
@@ -158,5 +159,10 @@
             "name": "Trogon collarejo",
             "info": "El trogon collarejo es un ave tropical con un llamativo plumaje y un característico collar de colores."
         }
+    },
+    "llegar": {
+        "ruta": "¿Cómo llegar?",
+        "subtitle": "Explora la ruta para llegar al Ecoparque Cristo Rey",
+        "ubicacion": "Llegar al Hotel"
     }
 }

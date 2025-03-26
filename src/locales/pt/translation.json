@@ -2,6 +2,7 @@
   "navbar": {
     "inicio": "INÍCIO",
     "lugares": "LOCAIS",
+    "llegar": "COMO CHEGAR",
     "fauna": "FAUNA",
     "contactenos": "CONTATO",
     "idioma": "IDIOMA"
@@ -160,5 +161,10 @@
       "name": "Trogon collarejo",
       "info": "O trogon collarejo é uma ave tropical com uma plumagem marcante e um colar característico de cores."
     }
+  },
+  "llegar": {
+    "ruta": "Como Chegar?",
+    "subtitle": "Descubra a melhor rota para chegar ao hotel.",
+    "ubicacion": "Chegar ao hotel"
   }
 }

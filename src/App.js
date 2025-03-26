@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './i18n';
-import './global.css';  // ✅ Añade esta línea
+import './global.css';
 import Navbar from './components/Navbar/navbar.jsx';
 import Home from './pages/Home/home.jsx';
 import Footer from './components/Footer/footer.jsx';
@@ -12,6 +12,7 @@ import Lugares from './pages/Lugares/lugares.jsx';
 import Horarios from './pages/Horarios/horarios.jsx';
 import Recorrido from './pages/Recorrido/recorridoVirtual.jsx';
 import Fauna from './pages/Fauna/fauna.jsx';
+import Llegar from './pages/LLegar/llegar.jsx';
 
 // ✅ Añade este custom hook
 const usePreventSelection = () => {
@@ -57,6 +58,7 @@ function App() {
             <Route path="/horarios" element={<Horarios />} />
             <Route path="/recorrido" element={<Recorrido />} />
             <Route path="/fauna" element={<Fauna />} />
+            <Route path="/llegar" element={<Llegar />} />
           </Routes>
         </main>
 

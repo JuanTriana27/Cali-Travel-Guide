@@ -2,6 +2,7 @@
     "navbar": {
         "inicio": "ACCUEIL",
         "lugares": "LIEUX",
+        "llegar": "COMMENT ARRIVER",
         "fauna": "FAUNE",
         "contactenos": "CONTACTEZ-NOUS",
         "idioma": "LANGUE"
@@ -160,5 +161,10 @@
             "name": "Trogon collarejo",
             "info": "Le trogon collarejo est un oiseau tropical avec un plumage saisissant et un collier de couleurs caractéristiques."
         }
+    },
+    "llegar": {
+        "ruta": "Comment arriver ?",
+        "subtitle": "Explorez l'itinéraire pour vous rendre à l'hôtel",
+        "ubicacion": "Arrivée à l'hôtel"
     }
 }

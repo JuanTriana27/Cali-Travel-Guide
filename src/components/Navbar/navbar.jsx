@@ -40,6 +40,11 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
+          <Link to="/llegar" className="navbarLink" onClick={closeMenu}>
+            {t('navbar.llegar')}
+          </Link>
+        </li>
+        <li>
           <Link to="/fauna" className="navbarLink" onClick={closeMenu}>
             {t('navbar.fauna')}
           </Link>

@@ -1,0 +1,78 @@
+.llegar {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.llegarHeader {
+    background: linear-gradient(135deg, #91aec1, #508ca4);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Contenedor general de la sección del mapa */
+.map-section {
+    margin-top: 2rem;
+}
+
+/* Contenedor del mapa */
+.map-container {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 500px;
+}
+
+/* Estilo del iframe del mapa */
+.google-map {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    filter: grayscale(15%) contrast(105%);
+}
+
+/* Botón para abrir direcciones */
+.map-button {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #508ca4;
+    color: #F2F2F2;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.map-button:hover {
+    background: #508ca4;
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .map-container {
+        height: 400px;
+    }
+
+    .map-button {
+        width: 90%;
+        text-align: center;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}

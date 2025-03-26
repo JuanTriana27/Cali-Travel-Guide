@@ -2,6 +2,7 @@
     "navbar": {
         "inicio": "HOME",
         "lugares": "PLACES",
+        "llegar": "GETTING THERE",
         "fauna": "WILDLIFE",
         "contactenos": "CONTACT US",
         "idioma": "LANGUAGE"
@@ -160,5 +161,10 @@
             "name": "Collared Trogon",
             "info": "The collared trogon is a tropical bird with striking plumage and a characteristic colorful collar."
         }
+    },
+    "llegar": {
+        "ruta": "How to Get There?",
+        "subtitle": "Find the best way to reach the hotel.",
+        "ubicacion": "Arriving at the Hotel"
     }
 }
