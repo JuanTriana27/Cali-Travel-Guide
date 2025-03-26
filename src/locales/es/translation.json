@@ -22,6 +22,8 @@
             "subtitle": "Observa"
         }
     },
+
+    
     "footer": {
         "visitUs": "Visítenos",
         "addressLine1": "Monumento Cristo Rey",
@@ -36,6 +38,10 @@
         "copyRight": "Cali Travel Guide © 2024",
         "privacyPolicy": "Política de privacidad",
         "termsConditions": "Términos y condiciones"
+    },
+    "recorridoVirtual": {
+        "title": "Modelo en 3D",
+        "subtitle": "Mira nuestro modelo"
     },
     "historia": {
         "title": "Cristo Rey",

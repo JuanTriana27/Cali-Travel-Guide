@@ -166,5 +166,9 @@
         "ruta": "Comment arriver ?",
         "subtitle": "Explorez l'itinéraire pour vous rendre à l'hôtel",
         "ubicacion": "Arrivée à l'hôtel"
+    },
+    "recorridoVirtual": {
+        "title": "Modèle 3D",
+        "subtitle": "Regardez notre modèle"
     }
 }
