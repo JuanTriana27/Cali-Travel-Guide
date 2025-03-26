@@ -3,23 +3,16 @@ import emailjs from 'emailjs-com';
 import { useTranslation } from 'react-i18next';
 import './contactenos.css';
 
-// Inicializa EmailJS con tu ID
 emailjs.init('ocCME3mw3tE_Fhlkk');
 
 const Contactenos = () => {
   const { t } = useTranslation();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSending, setIsSending] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
@@ -27,15 +20,13 @@ const Contactenos = () => {
     setIsSending(true);
 
     try {
-      // Guardar en MongoDB
       const dbResponse = await fetch('/.netlify/functions/saveContact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       });
-      if (!dbResponse.ok) throw new Error('Error al guardar');
+      if (!dbResponse.ok) throw new Error(t('contactenos.dbError'));
 
-      // Enviar email
       await emailjs.send(
         'service_0mtghnm',
         'template_bx4u3em',
@@ -47,7 +38,7 @@ const Contactenos = () => {
         }
       );
 
-      alert(t('contactenos.success'));
+      setShowModal(true);
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
       alert(`${t('contactenos.error')}: ${error.message}`);
@@ -64,42 +55,17 @@ const Contactenos = () => {
           <form onSubmit={handleSubmit}>
             <div className="input-group">
               <label>{t('contactenos.fullName')}</label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder={t('contactenos.fullNamePlaceholder')}
-                required
-              />
+              <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder={t('contactenos.fullNamePlaceholder')} required />
             </div>
             <div className="input-group">
               <label>{t('contactenos.email')}</label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder={t('contactenos.emailPlaceholder')}
-                required
-              />
+              <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder={t('contactenos.emailPlaceholder')} required />
             </div>
             <div className="input-group">
               <label>{t('contactenos.message')}</label>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder={t('contactenos.messagePlaceholder')}
-                rows="5"
-                required
-              ></textarea>
+              <textarea name="message" value={formData.message} onChange={handleChange} placeholder={t('contactenos.messagePlaceholder')} rows="5" required></textarea>
             </div>
-            <button
-              type="submit"
-              className="submit-btn"
-              disabled={isSending}
-            >
+            <button type="submit" className="submit-btn" disabled={isSending}>
               {isSending ? t('contactenos.sending') : t('contactenos.send')}
             </button>
           </form>
@@ -133,6 +99,15 @@ const Contactenos = () => {
           </div>
         </div>
       </div>
+
+      {showModal && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <h3>{t('contactenos.success')}</h3>
+            <button className="modal-button" onClick={() => setShowModal(false)}>{t('contactenos.ok')}</button>
+          </div>
+        </div>
+      )}
     </main>
   );
 };

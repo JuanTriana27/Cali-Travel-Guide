@@ -99,15 +99,16 @@
         "messagePlaceholder": "Escribe tu mensaje aquí...",
         "sending": "Enviando...",
         "send": "Enviar Mensaje",
-        "success": "🎉 Mensaje enviado y guardado!",
-        "error": "❌ Error",
+        "success": "Mensaje enviado",
+        "ok": "OK",
+        "error": "Error",
         "directContact": "Contacto Directo",
         "mainOffice": "Direccion Principal",
         "address": "Cra. 122 #6-65, Barrio Pance,\nCali, Valle del Cauca",
         "phone": "Teléfono",
         "phoneNumber": "(602) 4882222",
         "emailTitle": "Correo Electrónico",
-        "emailAddress": "contacto@calitravelguide.com"
+        "emailAddress": "calitravelguide.usb@gmail.com"
     },
     "fotografias": {
         "title": "Fotografías",
