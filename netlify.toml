@@ -5,5 +5,5 @@
 [functions]
   node_bundler = "esbuild"
 
-[[functions.yourFunctionName]]
+[functions.sendEmail]
   timeout = 26
