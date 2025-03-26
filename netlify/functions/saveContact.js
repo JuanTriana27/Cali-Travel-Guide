@@ -7,7 +7,9 @@ const nodemailer = require('nodemailer');
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 exports.handler = async (event) => {
-  const client = new MongoClient(process.env.MONGODB_URI);
+  const client = new MongoClient(process.env.MONGODB_URI, {
+    serverSelectionTimeoutMS: 10000, // 10 segundos
+  });
   try {
     await client.connect();
     const db = client.db();
