@@ -19,13 +19,14 @@
 }
 
 .scanner-container {
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
     margin: 2rem auto;
     position: relative;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    width: 900px;
-    height: 500px;
 }
 
 .scanner-content {
@@ -111,9 +112,11 @@
 
 @media (max-width: 768px) {
     .scanner-container {
+        /* Se mantiene el ancho relativo y se puede ajustar la altura */
         height: 400px;
     }
 
+    /* Otros ajustes para botones e instrucciones */
     .scanner-toggle {
         width: 90%;
         padding: 10px 15px;

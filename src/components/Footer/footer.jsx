@@ -16,7 +16,7 @@ const Footer = () => {
                         {t('footer.addressLine2')}<br />
                         {t('footer.addressLine3')}
                     </p>
-                    <li><Link to="/contactenos"><button className="footerButton">{t('footer.moreInfo')}</button></Link></li>
+                    <li><Link to="/historia"><button className="footerButton">{t('footer.moreInfo')}</button></Link></li>
                 </div>
 
                 <div className="footerColumn">
