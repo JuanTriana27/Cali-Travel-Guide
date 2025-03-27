@@ -17,6 +17,7 @@ const Navbar = () => {
     if (menuToggle) menuToggle.checked = false;
   };
 
+  // Retornamos el HTML
   return (
     <nav className="navbar">
       <h1>

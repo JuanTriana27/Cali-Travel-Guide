@@ -1,7 +1,7 @@
 import React from 'react'; // Importamos la librería de React
 import { Link } from 'react-router-dom';  // Importamos el componente Link de react-router-dom
 import '../Card/card.css'; // Importamos el archivo de estilos
-import recorrido from '../../assets/imagenes/Recorrido.jpg';
+import recorrido from '../../assets/imagenes/Recorrido.jpg'; // Importamos las imagenes
 import fotografias from '../../assets/imagenes/Historia.jpg';
 import cristoRey from '../../assets/imagenes/Fotografia.jpg';
 

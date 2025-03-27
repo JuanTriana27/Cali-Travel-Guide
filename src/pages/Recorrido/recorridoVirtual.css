@@ -112,11 +112,9 @@
 
 @media (max-width: 768px) {
     .scanner-container {
-        /* Se mantiene el ancho relativo y se puede ajustar la altura */
         height: 400px;
     }
 
-    /* Otros ajustes para botones e instrucciones */
     .scanner-toggle {
         width: 90%;
         padding: 10px 15px;

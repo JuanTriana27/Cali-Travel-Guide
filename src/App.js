@@ -14,7 +14,6 @@ import Recorrido from './pages/Recorrido/recorridoVirtual.jsx';
 import Fauna from './pages/Fauna/fauna.jsx';
 import Llegar from './pages/LLegar/llegar.jsx';
 
-// ✅ Añade este custom hook
 const usePreventSelection = () => {
   React.useEffect(() => {
     const blockEvent = (e) => e.preventDefault();
@@ -30,7 +29,7 @@ const usePreventSelection = () => {
 };
 
 function App() {
-  usePreventSelection();  // ✅ Activa el bloqueo aquí
+  usePreventSelection();
 
   return (
     <Router>

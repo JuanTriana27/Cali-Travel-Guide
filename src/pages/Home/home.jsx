@@ -1,10 +1,10 @@
 import React from 'react';
-import Card from '../../components/Card/card.jsx';
-import { useTranslation } from 'react-i18next';
-import '../../pages/Home/home.css';
+import Card from '../../components/Card/card.jsx'; // Componente card
+import { useTranslation } from 'react-i18next'; // Traduccion
+import '../../pages/Home/home.css'; // Estilos de la página
 
 const Home = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(); // Hook para traducciones
 
   return (
     <div className="home">
@@ -14,12 +14,14 @@ const Home = () => {
         link="recorrido"
         imageKey="recorrido"
       />
+
       <Card
         title={t('home.historia.title')}
         subtitle={t('home.historia.subtitle')}
         link="/historia"
         imageKey="historia"
       />
+
       <Card
         title={t('home.fotografias.title')}
         subtitle={t('home.fotografias.subtitle')}

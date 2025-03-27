@@ -64,7 +64,6 @@
     object-fit: cover;
 }
 
-/* Cambiamos aquí la clase del overlay a faunaOverlay */
 .faunaOverlay {
     position: absolute;
     top: 0;
@@ -78,7 +77,6 @@
     transition: opacity 0.3s ease;
 }
 
-/* Ahora se aplica el hover sobre faunaCard para mostrar faunaOverlay */
 .faunaCard:hover .faunaOverlay {
     opacity: 1;
 }

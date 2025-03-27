@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import AudioPlayer from '../../components/AudioPlayer/audio';
+import AudioPlayer from '../../components/AudioPlayer/audio'; // Componente para los audios
 import '../../pages/Fauna/fauna.css';
 
+// Arreglo con cada uno de los animales junto a su imagen y audio respectivo
 const faunaData = [
     {
         id: 1,
@@ -146,7 +147,6 @@ const Fauna = () => {
                                         >
                                             Reproducir Audio
                                         </button>
-                                        {/* Se monta el componente AudioPlayer para el audio respectivo */}
                                         <AudioPlayer
                                             soundUrl={animal.sound}
                                             ref={ref => {

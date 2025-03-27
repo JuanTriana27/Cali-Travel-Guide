@@ -4,6 +4,7 @@ import '../../pages/Historia/historia.css';
 import ReactPlayer from 'react-player';
 import image4 from '../../assets/imagenes/Image4.jpg';
 
+// Arreglo con los videos y su respectivo idioma
 const videoConfig = {
   en: [
     {

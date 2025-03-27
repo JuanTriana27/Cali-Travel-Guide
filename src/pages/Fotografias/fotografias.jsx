@@ -2,8 +2,9 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../../pages/Fotografias/fotografias.css';
 
+// Se actualiza el intervalo a 3000 ms para 3 segundos
 const PRELOAD_CONCURRENCY = 3;
-const SLIDER_INTERVAL = 5000;
+const SLIDER_INTERVAL = 3000;
 
 const mediaContext = require.context('../../assets/imagenes', false, /\.(jpg|jpeg|JPG|JPEG)$/i);
 const mediaFiles = mediaContext.keys().map(path => ({
@@ -62,6 +63,7 @@ const Fotografias = () => {
         setHasCompleted(false);
     }, [currentIndex]);
 
+    // Se establece un interval de 3 segundos para el cambio automático de fotos
     useEffect(() => {
         if (isSlidingPaused || showModal || isLoading) return;
         const timer = setInterval(() => {

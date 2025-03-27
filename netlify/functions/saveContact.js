@@ -58,22 +58,23 @@ exports.handler = async (event) => {
           from: process.env.EMAIL_USER,
           to: contact.email,
           subject: 'Notificación de Contacto',
-          text: `Hola ${contact.name || 'usuario'}, 
+          text: 
+`Hola ${contact.name || 'usuario'}, 
 
-          Antes de realizar su inscripción, tenga en cuenta:
+Antes de realizar su inscripción, tenga en cuenta:
           
-          Ingreso gratuito: El acceso al ecoparque no tiene costo.
-          Número de personas: Máximo 5 personas por inscripción.
-          Horarios disponibles: 9:00 a.m., 12:00 p.m., 3:00 p.m.
-          Inscripción obligatoria: Debe presentar su QR y documento de identificación.
+Ingreso gratuito: El acceso al ecoparque no tiene costo.
+Número de personas: Máximo 5 personas por inscripción.
+Horarios disponibles: 9:00 a.m., 12:00 p.m., 3:00 p.m.
+Inscripción obligatoria: Debe presentar su QR y documento de identificación.
           
-          Adjunto encontraras más detalles en la imagen.
+Adjunto encontraras más detalles en la imagen.
           
-          Saludos.`,
+Saludos.`,
 
           attachments: [
             {
-              filename: 'CARTEL.png',
+              filename: 'advertisement.png',
               path: 'https://registerapp.testweb2024.com/images/pieza1.png',
               cid: 'cartelImage'
             }
