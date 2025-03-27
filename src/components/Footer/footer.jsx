@@ -27,44 +27,6 @@ const Footer = () => {
                         <li><Link to="/contactenos">{t('footer.contactUs')}</Link></li>
                     </ul>
                 </div>
-
-                <div className="footerColumn">
-                    <h3>{t('footer.socialMedia')}</h3>
-                    <div className="footerSocials">
-                        <ul>
-                            <li>
-                                <a href="https://www.instagram.com">
-                                    <i className="fab fa-instagram">Instagram</i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.facebook.com">
-                                    <i className="fab fa-facebook">Facebook</i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://x.com">
-                                    <i className="fab fa-twitter">X</i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.youtube.com">
-                                    <i className="fab fa-youtube">Youtube</i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div className="footerBottom">
-                <p>{t('footer.copyRight')}</p>
-                <a href="https://www.google.com/search?client=opera&q=terminos+y+condiciones&sourceid=opera&ie=UTF-8&oe=UTF-8">
-                    {t('footer.privacyPolicy')}
-                </a> |
-                <a href="https://www.google.com/search?client=opera&q=terminos+y+condiciones&sourceid=opera&ie=UTF-8&oe=UTF-8">
-                    {t('footer.termsConditions')}
-                </a>
             </div>
         </footer>
     );
