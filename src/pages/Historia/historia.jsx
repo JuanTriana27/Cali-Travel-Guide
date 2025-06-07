@@ -103,8 +103,8 @@ const Historia = () => {
               }
             }}
           />
-          <button 
-            className="closeInlineButton" 
+          <button
+            className="closeInlineButton"
             onClick={(e) => {
               e.stopPropagation();
               setSelectedVideo(null);
@@ -115,22 +115,11 @@ const Historia = () => {
         </div>
       );
     }
-    
+
     const getThumbnail = () => {
-      if (video.isLocal) {
-        return (
-          <div className="localVideoThumbnail">
-            <div className="videoOverlay">
-              <span className="playIcon">&#9658;</span>
-            </div>
-          </div>
-        );
-      }
-      
-      const videoId = video.url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([^&?]+)/)?.[1];
-      return videoId && (
+      return (
         <img
-          src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+          src="/banner/fondo.png"
           alt={t(video.titleKey)}
           className="thumbnailImage"
         />

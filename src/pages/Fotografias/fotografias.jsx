@@ -102,6 +102,7 @@ const Fotografias = () => {
                         loading="lazy"
                         decoding="async"
                         onError={handleMediaError}
+                        style={{ width: '100%', height: '700px' }}
                     />
                 </div>
 
