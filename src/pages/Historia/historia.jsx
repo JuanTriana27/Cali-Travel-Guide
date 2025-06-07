@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../../pages/Historia/historia.css';
 import ReactPlayer from 'react-player';
-import image4 from '../../assets/imagenes/Image4.jpg';
+import DSC05469 from '../../assets/imagenes/DSC05469.jpg';
 
 // Arreglo con los videos y su respectivo idioma
 const videoConfig = {
@@ -160,8 +160,9 @@ const Historia = () => {
       <section className="historiaContent">
         <div className="historiaImageContainer">
           <img
-            src={image4}
+            src={DSC05469}
             alt={t('historia.title')}
+            style={{ width: '600px', height: '350px' }}
             className="historiaImage"
           />
         </div>
